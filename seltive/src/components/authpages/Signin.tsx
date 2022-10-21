@@ -47,7 +47,9 @@ const Signin = () => {
                         <label htmlFor="Password">Password</label>
                         <input type="password" placeholder='Enter your password.' className='mb-5 p-1 border border-black outline-none rounded-[5px]' />
                         <span className='flex justify-between m-1'>
-                            <span className='relative -top-5 text-xs text-indigo-700 cursor-pointer'>Forgot Password</span>
+                            <Link to='/forgotpassword' className='relative -top-5 text-xs text-indigo-700 cursor-pointer'>
+                                Forgot Password
+                            </Link>
                             <input type="checkbox" name="Show Passcord" id="" className='text-xs relative -top-5 left-[220px] ' />
                             <span className='relative -top-5 text-xs'>Show Password</span>
                         </span>

@@ -53,13 +53,8 @@ const Signup = () => {
                         </span>
                         <label htmlFor="Password">Password</label>
                         <input type="password" placeholder='Enter your password.' className='mb-5 p-1 border border-black outline-none rounded-[5px]' />
-                        <span className='flex justify-between m-1'>
-                            <span className='relative -top-5 text-xs text-indigo-700 cursor-pointer'>Forgot Password</span>
-                            <input type="checkbox" name="Show Passcord" id="" className='text-xs relative -top-5 left-[220px] ' />
-                            <span className='relative -top-5 text-xs'>Show Password</span>
-                        </span>
                         <Link to='/confirm' className='bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] text-center'>
-                        <input type="button" value="Create Account"  />
+                        <input type="button" value="Create Account" className='cursor-pointer' />
                         </Link>
                         <span className='text-center m-3'>OR</span>
                         <button className='p-1 gap-1 text-center bg-white text-black flex items-center justify-center mb-3 border border-gray-500 rounded-[5px]'>{Googleicon}Continue with Google</button>
