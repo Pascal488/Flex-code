@@ -1,4 +1,7 @@
 import React from 'react'
+import {BsEnvelopeFill} from 'react-icons/bs'
+import { Link } from 'react-router-dom';
+
 
 const Confirm = () => {
     return (
@@ -32,7 +35,28 @@ const Confirm = () => {
                     </div>
                 </div>
                 <div className='flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4'>
-                 
+                <div className='flex flex-col justify-center items-center p-[10%] text-center'>
+           <span className='w-[250px] h-[250px] bg-indigo-200 rounded-full flex items-center justify-center mb-10'>
+            
+           <BsEnvelopeFill className='w-[150px] h-[150px] text-indigo-700'/>
+           </span>
+           <h1 className='font-semibold text-[39px]'>
+            Check your email
+           </h1>
+           <p >We have sent a password reset link to <br/> 
+                <span className='font-bold text-black'>
+                    jonedone@gmail.com
+                </span>
+           </p>
+            <span className=' text-xs text-center p-3 flex items-center gap-1 '>
+            <span>
+                Didn't receive email?
+            </span>
+            <Link to='/un' className='text-indigo-700 font-bold'>
+                Click to resend
+             </Link>
+            </span>
+        </div>
                 </div>
         </div>
         </div>

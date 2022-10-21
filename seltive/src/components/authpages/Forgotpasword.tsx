@@ -6,7 +6,6 @@ import {AiOutlineArrowLeft} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 
 
-const Lockicon = <FaLock/>
 
 const Forgotpasword = () => {
   return (
@@ -23,14 +22,15 @@ const Forgotpasword = () => {
            </p>
             <span className='text-left relative -left-[220px] m-2'> Username or Email</span>
             <input type="text" placeholder='Enter your username or email.' className='p-1 border border-black outline-none rounded-[5px] mb-5 w-[50%]' />
-            <input type="button" value="Reset Password" className='bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] w-[50%]' />
+            <Link to='/checkemail' className='bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] w-[50%]'>
+            <input type="button" value="Reset Password"  />
+            </Link>
             <span className='text-center p-3 flex items-center gap-1 text-indigo-700 font-bold'>
             <AiOutlineArrowLeft className=''/>
             <Link to='/'>
                 Back to Sign In
              </Link>
             </span>
-
         </div>
 
 
