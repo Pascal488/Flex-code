@@ -1,7 +1,9 @@
 import React from 'react'
+import { useState } from  "react";
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillApple } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+
 
 
 export const Googleicon = <FcGoogle />;
@@ -9,6 +11,11 @@ export const Googleicon = <FcGoogle />;
 export const Appleicon = <AiFillApple />
 
 const Signin = () => {
+    const [passwordShown, setPasswordShown] = useState(false);
+    const togglePassword = () => {
+        setPasswordShown(!passwordShown);
+        //console.log("Hi")
+      };
     return (
         <div>
             <div className='flex h-screen md:flex-col'>
@@ -45,12 +52,12 @@ const Signin = () => {
                         <label htmlFor="Email"> Username or Email</label>
                         <input type="text" placeholder='Enter your username or email.' className='p-1 border border-black outline-none rounded-[5px] mb-5' />
                         <label htmlFor="Password">Password</label>
-                        <input type="password" placeholder='Enter your password.' className='mb-5 p-1 border border-black outline-none rounded-[5px]' />
+                        <input type={passwordShown ? "text" : "password"} placeholder='Enter your password.' className='mb-5 p-1 border border-black outline-none rounded-[5px]' />
                         <span className='flex justify-between m-1'>
                             <Link to='/forgotpassword' className='relative -top-5 text-xs text-indigo-700 cursor-pointer'>
                                 Forgot Password
                             </Link>
-                            <input type="checkbox" name="Show Passcord" id="" className='text-xs relative -top-5 left-[220px] ' />
+                            <input type="checkbox" name="Show Passcord" id="" className='text-xs relative -top-5 left-[220px] ' onClick={togglePassword}/>
                             <span className='relative -top-5 text-xs'>Show Password</span>
                         </span>
                         <input type="button" value="Sign In" className='bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px]' />
