@@ -1,24 +1,47 @@
+import { Sign } from 'crypto';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Allauthpages from './components/authpages/Allauthpages';
+//import {useQuery, gql} from '@apollo/client';
+
+// export const Userdata = gql`
+// query GetUsers($params: Params!) {
+//   getUsers(params: $params) {
+//     id
+//     firstName
+//     middleName
+//     bio
+//     email
+//     lastName
+//     name
+//     username
+//     dp
+//     verified
+//     enabled
+//     created
+//     lastUpdated
+//     token
+//     total
+//     userCover
+//     creator
+//     twoFa
+//   }
+// }
+// `
 
 function App() {
+  //const {loading, error, data} = useQuery(Userdata);
+  //console.log(data)
+
+  // if(loading) return(<> Loading</>);
+  // if(error) return(<>{JSON.stringify(error)}</>)
+  // return (
+  //  <>
+  //  {JSON.stringify(data)}
+  //  </>);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Allauthpages/>
     </div>
   );
 }
