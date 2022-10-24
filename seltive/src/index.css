@@ -2,11 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
-    html {
-      font-family:  'Barlow', sans-serif;
-    }
+  html {
+    font-family: "Barlow", sans-serif;
   }
-
+}

@@ -2,7 +2,7 @@ import { Sign } from 'crypto';
 import React from 'react';
 
 import Allauthpages from './components/authpages/Allauthpages';
-//import {useQuery, gql} from '@apollo/client';
+import {useQuery, gql} from '@apollo/client';
 
 // export const Userdata = gql`
 // query GetUsers($params: Params!) {
@@ -30,8 +30,8 @@ import Allauthpages from './components/authpages/Allauthpages';
 // `
 
 function App() {
-  //const {loading, error, data} = useQuery(Userdata);
-  //console.log(data)
+  // const {loading, error, data} = useQuery(Userdata,{variables:{params:{}}});
+  // console.log(data)
 
   // if(loading) return(<> Loading</>);
   // if(error) return(<>{JSON.stringify(error)}</>)
@@ -39,7 +39,7 @@ function App() {
   //  <>
   //  {JSON.stringify(data)}
   //  </>);
-  return (
+   return (
     <div >
       <Allauthpages/>
     </div>
