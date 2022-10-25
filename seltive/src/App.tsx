@@ -4,6 +4,7 @@ import React from 'react';
 import Allauthpages from './components/authpages/Allauthpages';
 import {useQuery, gql} from '@apollo/client';
 
+
 // export const Userdata = gql`
 // query GetUsers($params: Params!) {
 //   getUsers(params: $params) {
@@ -41,7 +42,9 @@ function App() {
   //  </>);
    return (
     <div >
-      <Allauthpages/>
+     <Allauthpages/> 
+
+      {/* <Try/> */}
     </div>
   );
 }

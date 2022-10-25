@@ -17,18 +17,18 @@ const Forgotpasword = () => {
           Enter the email assocciated with your account or your username <br />{" "}
           and we'll send you a link to reset your password.
         </p>
-        <span className="text-left relative -left-[220px] m-2">
+        <label className="text-left float-left">
           {" "}
           Username or Email
-        </span>
+        </label>
         <input
           type="text"
           placeholder="Enter your username or email."
-          className="p-1 border border-black outline-none rounded-[5px] mb-5 w-[50%]"
+          className="p-1 border border-black outline-none rounded-[5px] mb-5 w-[50%] md:w-full ipad:w-full "
         />
         <Link
           to="/checkemail"
-          className="bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] w-[50%]"
+          className="bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] w-[50%] md:w-full ipad:w-full"
         >
           <input type="button" value="Reset Password" />
         </Link>

@@ -59,9 +59,9 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="flex  md:flex-col h-screen">
+      <div className="flex  md:flex-col h-screen ">
         <div
-          className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen"
+          className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden"
           style={{
             backgroundImage:
               "url('ht://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA..')",
@@ -89,37 +89,22 @@ const Signup = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ">
+        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative">
           <form
-            className="flex flex-col justify-center py-24 px-10 "
+            className="flex flex-col justify-center py-24 px-10 ipad:justify-center ipad:m-auto"
             onSubmit={onsubmit}
           >
             <h1 className="text-[49px] text-gray-900 mb-3"> Join Seltive</h1>
 
-            <span className="flex  justify-between ">
-              <span>
-                <label htmlFor="Email"> First Name</label>
-                <br />
-                <input
-                  type="text"
-                  name="name"
-                  onChange={onchange}
-                  placeholder="Enter your first name"
-                  className="w-[269px] p-1 border border-black outline-none rounded-[5px] mb-5"
-                />
-              </span>
-              <span>
-                <label htmlFor="Email"> Last Name</label>
-                <br />
-                <input
-                  type="text"
-                  name="name"
-                  onChange={onchange}
-                  placeholder="Enter your last name"
-                  className="w-[265px] p-1 border border-black outline-none rounded-[5px] mb-5"
-                />
-              </span>
-            </span>
+            <label htmlFor="Email"> First Name</label>
+            <input
+              type="text"
+              name="name"
+              onChange={onchange}
+              placeholder="Enter your first name"
+              className=" p-1 border border-black outline-none rounded-[5px] mb-5 "
+            />
+
             <label htmlFor="Username">Username</label>
             <input
               type="text"
