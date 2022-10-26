@@ -5,6 +5,7 @@ import { Appleicon } from "./Signin";
 
 import { Link } from "react-router-dom";
 import { useMutation, gql } from "@apollo/client";
+import { useForm } from "react-hook-form";
 
 export const Userdata = gql`
   mutation Register($user: UserInput!) {
@@ -30,6 +31,12 @@ export const Userdata = gql`
     }
   }
 `;
+type Inputs = {
+  email: string;
+  name: string;
+  password: string;
+  username: string;
+};
 
 const Signup = () => {
   const [variables, SetVariables] = useState({
@@ -39,23 +46,37 @@ const Signup = () => {
     password: "",
   });
 
+  const {
+    register:registerValidate,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  
+
   const onchange = (e: any) => {
     SetVariables({
       ...variables,
       [e.target.name]: e.target.value,
     });
   };
-  //console.log(variables)
+
   const [register, { loading, error, data }] = useMutation(Userdata, {
     variables: { user: variables },
   });
   console.log(error);
   console.log(loading);
   console.log(data);
-  const onsubmit = (e: any) => {
+
+  const onSubmit = (data: Inputs,e:any) => {
+    console.log(data);
     e.preventDefault();
     register();
+
+    
   };
+
+  
 
   return (
     <div>
@@ -92,43 +113,62 @@ const Signup = () => {
         <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative">
           <form
             className="flex flex-col justify-center py-24 px-10 ipad:justify-center ipad:m-auto"
-            onSubmit={onsubmit}
+            onSubmit={handleSubmit(onSubmit)}
           >
             <h1 className="text-[49px] text-gray-900 mb-3"> Join Seltive</h1>
 
             <label htmlFor="Email"> First Name</label>
             <input
               type="text"
-              name="name"
+              {...registerValidate("name", { required: true })}
               onChange={onchange}
               placeholder="Enter your first name"
               className=" p-1 border border-black outline-none rounded-[5px] mb-5 "
             />
-
+            {errors.email && (
+              <p className=" relative left-1 -top-5 text-red-500 text-xs ">
+                Enter your name or email
+              </p>
+            )}
             <label htmlFor="Username">Username</label>
             <input
               type="text"
-              name="username"
+              {...registerValidate("username", { required: true })}
               onChange={onchange}
               placeholder="Enter your password."
               className="mb-4 p-1 border border-black outline-none rounded-[5px]"
             />
+            {errors.email && (
+              <p className=" relative left-1 -top-4 text-red-500 text-xs ">
+                Enter your name or email
+              </p>
+            )}
             <label htmlFor="Email">Email</label>
             <input
               type="Email"
-              name="email"
+              {...registerValidate("email", { required: true })}
               onChange={onchange}
               placeholder="Enter your password."
               className="mb-4 p-1 border border-black outline-none rounded-[5px]"
             />
+            {errors.email && (
+              <p className=" relative left-1 -top-4 text-red-500 text-xs ">
+                Enter your name or email
+              </p>
+            )}
             <label htmlFor="Password">Password</label>
             <input
               type="password"
-              name="password"
+              {...registerValidate("password", { required: true })}
               onChange={onchange}
               placeholder="Enter your password."
               className="mb-4 p-1 border border-black outline-none rounded-[5px]"
             />
+            {errors.email && (
+              <p className=" relative left-1 -top-4 text-red-500 text-xs ">
+                Enter your name or email
+              </p>
+            )}
             {/* <Link to='/confirm' className='bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] text-center'> */}
             <input
               type="submit"
