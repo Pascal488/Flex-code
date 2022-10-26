@@ -3,57 +3,39 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 export const Googleicon = <FcGoogle />;
 
 export const Appleicon = <AiFillApple />;
 
+type Profile = {
+  email: string;
+  name: string;
+  password: string;
+};
 const Signin = (props: any) => {
   const [passwordShown, setPasswordShown] = useState(false);
-  const [formErrors, setFormErrors] = useState({});
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Profile>();
+
+  const onSubmit = (data: Profile) => {
+    console.log(data);
+  };
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
-    //console.log("Hi")
   };
+
   const [values, SetValues] = useState({
     name: "",
     email: "",
     username: "",
     password: "",
   });
-
-  const handleChange = (e: any) => {
-    SetValues({ ...values, [e.target.name]: e.target.value });
-  };
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    if (
-      values.name === "" ||
-      values.email === "" ||
-      values.username === "" ||
-      values.password === ""
-    ) {
-      setFormErrors(validate(values));
-    } else {
-      alert("Done");
-    }
-    setFormErrors({});
-  };
-
-  const validate = (values: any) => {
-    const errors: any = {};
-    if (!values.email) {
-      errors.email = "Email is required!";
-    }
-    if (!values.password) {
-      errors.password = "Password price is required!";
-    }
-    if (!values.username) {
-      errors.username = "Enter username";
-    }
-    return errors;
-  };
 
   return (
     <div>
@@ -90,28 +72,35 @@ const Signin = (props: any) => {
         <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative">
           <form
             className="flex flex-col justify-center py-36 px-10 ipad:m-auto"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
           >
             <h1 className="text-[49px] text-gray-900 mb-8 "> Welcome Back</h1>
             <label htmlFor="Email"> Username or Email</label>
             <input
-              onChange={handleChange}
-              value={values.email}
-              name="email"
+              id="email"
+              {...register("email", { required: true })}
               type="text"
               placeholder="Enter your username or email."
               className="p-1 border border-black outline-none rounded-[5px] mb-5"
             />
-            <p className="relative left-1 -top-5 text-red-500 text-xs ">{}</p>
+            {errors.email && (
+              <p className=" relative left-1 -top-5 text-red-500 text-xs ">
+                Enter your name or email
+              </p>
+            )}
+
             <label htmlFor="Password">Password</label>
             <input
-              onChange={handleChange}
-              value={values.password}
-              name="password"
+              {...register("password", { required: true })}
               type={passwordShown ? "text" : "password"}
               placeholder="Enter your password."
               className="mb-5 p-1 border border-black outline-none rounded-[5px]"
             />
+            {errors.password && (
+              <p className=" relative left-1 -top-5 text-red-500 text-xs ">
+                Enter your Password
+              </p>
+            )}
             <span className="flex justify-between m-1">
               <Link
                 to="/forgotpassword"
