@@ -47,12 +47,10 @@ const Signup = () => {
   });
 
   const {
-    register:registerValidate,
+    register: registerValidate,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-
-  
 
   const onchange = (e: any) => {
     SetVariables({
@@ -64,19 +62,12 @@ const Signup = () => {
   const [register, { loading, error, data }] = useMutation(Userdata, {
     variables: { user: variables },
   });
-  console.log(error);
-  console.log(loading);
-  console.log(data);
-
-  const onSubmit = (data: Inputs,e:any) => {
+  
+  const onSubmit = (data: Inputs, e: any) => {
     console.log(data);
     e.preventDefault();
     register();
-
-    
   };
-
-  
 
   return (
     <div>
@@ -117,7 +108,7 @@ const Signup = () => {
           >
             <h1 className="text-[49px] text-gray-900 mb-3"> Join Seltive</h1>
 
-            <label htmlFor="Email"> First Name</label>
+            <label htmlFor="Email">Name</label>
             <input
               type="text"
               {...registerValidate("name", { required: true })}
@@ -127,7 +118,7 @@ const Signup = () => {
             />
             {errors.email && (
               <p className=" relative left-1 -top-5 text-red-500 text-xs ">
-                Enter your name or email
+                Enter your name
               </p>
             )}
             <label htmlFor="Username">Username</label>
@@ -140,7 +131,7 @@ const Signup = () => {
             />
             {errors.email && (
               <p className=" relative left-1 -top-4 text-red-500 text-xs ">
-                Enter your name or email
+                Enter your username
               </p>
             )}
             <label htmlFor="Email">Email</label>
@@ -153,7 +144,7 @@ const Signup = () => {
             />
             {errors.email && (
               <p className=" relative left-1 -top-4 text-red-500 text-xs ">
-                Enter your name or email
+                Enter your email
               </p>
             )}
             <label htmlFor="Password">Password</label>
@@ -166,7 +157,7 @@ const Signup = () => {
             />
             {errors.email && (
               <p className=" relative left-1 -top-4 text-red-500 text-xs ">
-                Enter your name or email
+                Enter your password
               </p>
             )}
             {/* <Link to='/confirm' className='bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] text-center'> */}

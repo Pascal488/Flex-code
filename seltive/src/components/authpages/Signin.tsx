@@ -4,38 +4,63 @@ import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useLazyQuery,gql } from '@apollo/client';
 
 export const Googleicon = <FcGoogle />;
-
 export const Appleicon = <AiFillApple />;
 
-type Profile = {
-  email: string;
-  name: string;
+export const LoginQuery = gql`
+  query Login($login: Login!) {
+    login(login: $login) {
+      id
+      firstName
+      middleName
+      bio
+      email
+      lastName
+      name
+      username
+      dp
+      verified
+      enabled
+      created
+      lastUpdated
+      token
+      total
+      userCover
+      creator
+      twoFa
+    }
+  }
+`;
+type Inputs = {
+  username: string;
   password: string;
 };
+
 const Signin = (props: any) => {
-  const [passwordShown, setPasswordShown] = useState(false);
   const {
     register,
+    getValues,
     handleSubmit,
     formState: { errors },
-  } = useForm<Profile>();
+  } = useForm<Inputs>();
 
-  const onSubmit = (data: Profile) => {
+  const [login, { loading, error, data }] = useLazyQuery(LoginQuery, {
+
+   variables: { login: getValues() },
+  });
+  const [passwordShown, setPasswordShown] = useState(false);
+  
+
+  const onSubmit = (data: Inputs) => {
     console.log(data);
+    login();
   };
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
-
-  const [values, SetValues] = useState({
-    name: "",
-    email: "",
-    username: "",
-    password: "",
-  });
 
   return (
     <div>
@@ -78,14 +103,18 @@ const Signin = (props: any) => {
             <label htmlFor="Email"> Username or Email</label>
             <input
               id="email"
-              {...register("email", { required: true })}
+              {...register("username", 
+              { required: true,
+                pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              
+              })}
               type="text"
               placeholder="Enter your username or email."
               className="p-1 border border-black outline-none rounded-[5px] mb-5"
             />
-            {errors.email && (
+            {errors.username && (
               <p className=" relative left-1 -top-5 text-red-500 text-xs ">
-                Enter your name or email
+                Enter your valid name or email
               </p>
             )}
 
