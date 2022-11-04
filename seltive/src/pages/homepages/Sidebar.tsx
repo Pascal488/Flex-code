@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { HiOutlineCog } from "react-icons/hi";
 import { TbChartPie } from "react-icons/tb";
@@ -8,9 +8,13 @@ import { BsBookmark } from "react-icons/bs";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
 
 const Sidebar = () => {
-  const toaneno = () =>{
   
-  }
+  const commonstyles = {
+    padding: "0.375rem",
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+  };
   return (
     <div className="flex flex-col p-4 gap-2">
       <div className="flex  gap-4 items-center mb-10">
@@ -22,35 +26,59 @@ const Sidebar = () => {
       <div>
         <ul className="list-none text-gray-700">
           <span className="mb-5 p-2 text-sm font-extrabold">STORE</span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer  hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <AiOutlineHome />
-            <li onClick={toaneno}>Overview</li>
+            <li>Overview</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <BsBookmark />
-            <li >Orders</li>
+            <li>Orders</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <HiOutlineFolder />
             <li>Products</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <BsPeople />
             <li>Customers</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <TbChartPie />
             <li>Analystics</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <HiOutlineReceiptRefund />
             <li>Promotion</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <AiOutlineHome />
             <li>Marketing</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <HiOutlineCog />
             <li>Store setting</li>
           </span>
@@ -58,20 +86,32 @@ const Sidebar = () => {
       </div>
       <div>
         <ul className="list-none text-gray-700">
-          <span className="mb-5 p-2 text-sm font-extrabold">ACCOUNT</span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer  hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span className="p-2 text-sm font-extrabold">ACCOUNT</span>
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <BsSearch />
             <li>Explore</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <HiOutlineFolder />
             <li>Library</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <BsBookmark />
             <li>Saved Items</li>
           </span>
-          <span className="p-1.5 flex items-center gap-3 cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold">
+          <span
+            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            style={commonstyles}
+          >
             <HiOutlineCog />
             <li>Account Settings</li>
           </span>
