@@ -4,7 +4,7 @@ import Sidebar from "../pages/homepages/Sidebar";
 export default function AppLayout() {
   return (
     <main className="flex min-h-screen">
-      <section className="w-[20%] bg-red-200">
+      <section className="w-[200px] bg-gray-50">
         <Sidebar/>
       </section>
 

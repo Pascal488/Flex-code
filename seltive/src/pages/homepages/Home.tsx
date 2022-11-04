@@ -4,7 +4,9 @@ import AuthProvider from '../../providers/AuthProvider'
 const Home = () => {
   return (
     <AuthProvider>
-      Home
+      <div className='p-5'>
+        <h1>Hello</h1>
+      </div>
     </AuthProvider>
   )
 }
