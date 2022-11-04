@@ -18,7 +18,7 @@ import Home from "./pages/homepages/Home";
 
 function App() {
   return (
-    <div className="font-barlow">
+    <div className="font-barlow  bg-gray-50">
       
           
       <BrowserRouter>
