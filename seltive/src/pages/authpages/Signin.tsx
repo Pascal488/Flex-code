@@ -121,7 +121,7 @@ const Signin = (props: any) => {
               })}
               type="text"
               placeholder="Enter your username or email."
-              className="p-1 border border-black outline-none rounded-[5px] mb-5"
+              className="p-1.5 border border-black outline-none rounded-[5px] mb-5"
             />
             {errors.username && (
               <p className=" relative left-1 -top-5 text-red-500 text-xs ">
@@ -134,7 +134,7 @@ const Signin = (props: any) => {
               {...register("password", { required: true })}
               type={passwordShown ? "text" : "password"}
               placeholder="Enter your password."
-              className="mb-5 p-1 border border-black outline-none rounded-[5px]"
+              className="mb-5 p-1.5 border border-black outline-none rounded-[5px]"
             />
             {errors.password && (
               <p className=" relative left-1 -top-5 text-red-500 text-xs ">

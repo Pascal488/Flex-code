@@ -122,7 +122,7 @@ const Signup = (props: any) => {
                   })}
                   onChange={onchange}
                   placeholder="Enter your name"
-                  className=" p-1 border border-black outline-none rounded-[5px] mb-5 bg-transparent w-[300px]"
+                  className=" p-1.5 border border-black outline-none rounded-[5px] mb-5 bg-transparent w-[300px]"
                 />
                 {errors.name && (
                   <p className=" relative left-1 -top-5 text-red-500 text-xs ">
@@ -139,7 +139,7 @@ const Signup = (props: any) => {
                   })}
                   onChange={onchange}
                   placeholder="Enter your username."
-                  className="mb-4 p-1 border border-black outline-none rounded-[5px] bg-transparent w-[320px]"
+                  className="mb-4 p-1.5 border border-black outline-none rounded-[5px] bg-transparent w-[320px]"
                 />
                 {errors.username && (
                   <p className=" relative left-1 -top-4 text-red-500 text-xs ">
@@ -161,7 +161,7 @@ const Signup = (props: any) => {
               })}
               onChange={onchange}
               placeholder="Enter your email."
-              className="mb-4 p-1 border border-black outline-none rounded-[5px] bg-transparent"
+              className="mb-4 p-1.5 border border-black outline-none rounded-[5px] bg-transparent"
             />
             {errors?.email && (
               <p className="relative left-1 -top-4 text-red-500 text-xs ">
@@ -178,7 +178,7 @@ const Signup = (props: any) => {
               })}
               onChange={onchange}
               placeholder="Enter your password."
-              className="mb-4 p-1 border border-black outline-none rounded-[5px] bg-transparent"
+              className="mb-4 p-1.5 border border-black outline-none rounded-[5px] bg-transparent"
             />
             {errors.password && (
               <p className=" relative left-1 -top-4 text-red-500 text-xs ">
