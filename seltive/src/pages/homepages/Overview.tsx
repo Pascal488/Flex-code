@@ -1,5 +1,8 @@
 import React from "react";
-import { BsPeople } from "react-icons/bs";
+import { BsPeople,BsCart3 } from "react-icons/bs";
+import {HiOutlineCursorClick} from "react-icons/hi";
+import {MdOutlinePayments} from "react-icons/md";
+import {FaExternalLinkAlt} from "react-icons/fa"
 
 const Overview = () => {
   return (
@@ -58,25 +61,26 @@ const Overview = () => {
           <div>
             <div className="flex-2 flex bg-white shadow-md p-5 w-[300px] justify-self-end relative -left-[50px]">
               <div>
-                <h1 className="mb-5">Quick Actions</h1>
+                <h1 className="mb-5 font-extrabold text-sm">Quick Actions</h1>
                 <ul className="list-none flex flex-col gap-6 text-sm text-indigo-600 font-extrabold cursor-pointer">
                   <span className="flex items-center gap-3 hover:underline ">
-                    <BsPeople className="text-xl" />
+                    <FaExternalLinkAlt className="text-sm" />
 
                     <li>Visit store</li>
                   </span>
                   <span className="flex items-center gap-3 hover:underline ">
-                    <BsPeople className="text-xl" />
+                    <HiOutlineCursorClick className="text-xl" />
+
 
                     <li>Create New Product</li>
                   </span>
                   <span className="flex items-center gap-3 hover:underline ">
-                    <BsPeople className="text-xl" />
+                    <MdOutlinePayments className="text-xl" />
 
                     <li>Payouts</li>
                   </span>
                   <span className="flex items-center gap-3 hover:underline ">
-                    <BsPeople className="text-xl" />
+                    <BsCart3 className="text-xl" />
                     <li>Checkout Settings</li>
                   </span>
                   <span className="flex items-center gap-3 hover:underline ">
