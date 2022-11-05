@@ -160,7 +160,7 @@ const Signin = (props: any) => {
             <input
               type="submit"
               value="Sign In"
-              className="bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px]"
+              className="bg-indigo-700 text-white p-1.5 cursor-pointer rounded-[5px]"
             />
             <span className="text-center m-3">OR</span>
             <button className="p-1 gap-1 text-center bg-white text-black flex items-center justify-center mb-3 border border-gray-500 rounded-[5px]">

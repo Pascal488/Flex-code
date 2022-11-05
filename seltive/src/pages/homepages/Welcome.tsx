@@ -3,7 +3,7 @@ import React from "react";
 const Welcome = () => {
   return (
     <div>
-      <div className=" py-14 px-24 text-center  bg-white shadow-2xl ">
+      <div className=" py-14 px-24 text-center  bg-white shadow-xl ">
         <div className="flex flex-col gap-3">
           <h1 className="text-5xl font-extrabold">Welcome to Seltive </h1>
           <span className="mb-3 text-center">
@@ -12,7 +12,7 @@ const Welcome = () => {
             perfomance after you publish your first product
           </span>
         </div>
-        <button className="py-1 px-6 bg-indigo-600 text-white rounded-sm">
+        <button className="py-1 px-6 bg-indigo-600 text-white rounded-sm hover:bg-gray-50 hover:text-black hover:shadow-inner hover:border-2 hover:border-indigo-600">
             Create Product
           </button>
       </div>

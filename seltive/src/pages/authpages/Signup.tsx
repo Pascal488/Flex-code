@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Googleicon } from "./Signin";
 import { Appleicon } from "./Signin";
-import { Link, useNavigate  } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useMutation, gql } from "@apollo/client";
 import { useForm } from "react-hook-form";
 
@@ -37,7 +37,7 @@ type Inputs = {
   username: string;
 };
 
-const Signup = (props:any) => {
+const Signup = (props: any) => {
   const navigate = useNavigate();
   const [variables, SetVariables] = useState({
     name: "",
@@ -51,9 +51,6 @@ const Signup = (props:any) => {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  
-  
-
 
   const onchange = (e: any) => {
     SetVariables({
@@ -63,11 +60,11 @@ const Signup = (props:any) => {
   };
 
   const [register, { loading, error, data }] = useMutation(Userdata, {
-     update(result){
-    console.log(result)
-    navigate("/")
-  },
-  
+    update(result) {
+      console.log(result);
+      navigate("/");
+    },
+
     variables: { user: variables },
   });
 
@@ -115,38 +112,42 @@ const Signup = (props:any) => {
             onSubmit={handleSubmit(onSubmit)}
           >
             <h1 className="text-[49px] text-gray-900 mb-3"> Join Seltive</h1>
-
-            <label htmlFor="Name">Name</label>
-            <input
-              type="text"
-              {...registerValidate("name", {
-                required: true,
-                
-              })}
-              onChange={onchange}
-              placeholder="Enter your name"
-              className=" p-1 border border-black outline-none rounded-[5px] mb-5 bg-transparent"
-            />
-            {errors.name && (
-              <p className=" relative left-1 -top-5 text-red-500 text-xs ">
-                Enter your name
-              </p>
-            )}
-            <label htmlFor="Username">Username</label>
-            <input
-              type="text"
-              {...registerValidate("username", {
-                required: true,
-              })}
-              onChange={onchange}
-              placeholder="Enter your username."
-              className="mb-4 p-1 border border-black outline-none rounded-[5px] bg-transparent"
-            />
-            {errors.username && (
-              <p className=" relative left-1 -top-4 text-red-500 text-xs ">
-                Enter your username
-              </p>
-            )}
+            <span className="flex gap-5 w-full">
+              <span className="">
+                <label htmlFor="Name">Name</label> <br />
+                <input
+                  type="text"
+                  {...registerValidate("name", {
+                    required: true,
+                  })}
+                  onChange={onchange}
+                  placeholder="Enter your name"
+                  className=" p-1 border border-black outline-none rounded-[5px] mb-5 bg-transparent w-[300px]"
+                />
+                {errors.name && (
+                  <p className=" relative left-1 -top-5 text-red-500 text-xs ">
+                    Enter your name
+                  </p>
+                )}
+              </span>
+              <span className="">
+                <label htmlFor="Username">Username</label><br/>
+                <input
+                  type="text"
+                  {...registerValidate("username", {
+                    required: true,
+                  })}
+                  onChange={onchange}
+                  placeholder="Enter your username."
+                  className="mb-4 p-1 border border-black outline-none rounded-[5px] bg-transparent w-[320px]"
+                />
+                {errors.username && (
+                  <p className=" relative left-1 -top-4 text-red-500 text-xs ">
+                    Enter your username
+                  </p>
+                )}
+              </span>
+            </span>
             <label htmlFor="Email">Email</label>
             <input
               type="Email"
@@ -162,12 +163,11 @@ const Signup = (props:any) => {
               placeholder="Enter your email."
               className="mb-4 p-1 border border-black outline-none rounded-[5px] bg-transparent"
             />
-            {errors?.email && 
-            
-            <p className="relative left-1 -top-4 text-red-500 text-xs ">
-       Email is required
-    </p>
-            }
+            {errors?.email && (
+              <p className="relative left-1 -top-4 text-red-500 text-xs ">
+                Email is required
+              </p>
+            )}
             <label htmlFor="Password">Password</label>
             <input
               type="password"
@@ -189,7 +189,7 @@ const Signup = (props:any) => {
             <input
               type="submit"
               value="Create Account"
-              className="bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] text-center"
+              className="bg-indigo-700 text-white p-1.5 cursor-pointer rounded-[5px] text-center"
             />
 
             <span className="text-center m-3">OR</span>

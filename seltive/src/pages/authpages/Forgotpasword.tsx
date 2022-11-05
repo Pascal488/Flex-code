@@ -28,7 +28,7 @@ const Forgotpasword = () => {
         />
         <Link
           to="/checkemail"
-          className="bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] w-[50%] md:w-full ipad:w-full"
+          className="bg-indigo-700 text-white p-1.5 cursor-pointer rounded-[5px] w-[50%] md:w-full ipad:w-full"
         >
           <input type="button" value="Reset Password" />
         </Link>

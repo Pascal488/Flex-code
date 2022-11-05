@@ -11,22 +11,24 @@ const Setnewpasword = () => {
   };
   return (
     <div>
-      <div className="flex flex-col justify-center items-center p-[10%] text-center">
+      <div className="flex flex-col justify-center items-center p-[10%] text-center h-screen md:justify-center">
         <span className="w-[250px] h-[250px] bg-indigo-200 rounded-full flex items-center justify-center mb-3">
           <HiKey className="w-[150px] h-[150px] text-indigo-700" />
         </span>
-        <h1 className="font-semibold text-[39px]  ">Set new password</h1>
+        <h1 className="font-semibold text-[39px]  md:text-[30px]">Set new password</h1>
         <p className="text-gray-500 font-bold mb-5">
           Choose an easy to remember password
         </p>
 
         <form action="">
-          <span className=" relative -left-[190px]">Password</span>
+          <span className=" relative -left-[190px] md:-left-[115px]">
+            Password
+          </span>
           <br />
           <input
             type={passwordShown ? "text" : "password"}
             placeholder="Enter your password."
-            className="mb-5 p-1 border border-black outline-none rounded-[5px] w-[450px]"
+            className="mb-5 p-1 border border-black outline-none rounded-[5px] w-[450px] md:w-[300px]"
           />
           <span className="flex justify-between m-1">
             <span className="relative -top-5 text-xs cursor-pointer">
@@ -36,10 +38,12 @@ const Setnewpasword = () => {
               type="checkbox"
               name="Show Passcord"
               id=""
-              className="text-xs relative -top-5 left-[85px] "
+              className="text-xs relative -top-5 left-[85px] md:hidden"
               onClick={togglePassword}
             />
-            <span className="relative -top-5 text-xs">Show password </span>
+            <span className="relative -top-5 text-xs md:hidden" onClick={togglePassword}>
+              Show password{" "}
+            </span>
           </span>
           <Link to="/ressetsuccespage">
             <input

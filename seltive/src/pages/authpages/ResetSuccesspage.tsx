@@ -14,7 +14,7 @@ const ResetSuccesspage = () => {
         </h1>
         <Link
           to="/"
-          className="bg-indigo-700 text-white p-1 cursor-pointer rounded-[5px] w-[50%]"
+          className="bg-indigo-700 text-white p-1.5 cursor-pointer rounded-[5px] w-[50%]"
         >
           <input type="button" value="Sign In" />
         </Link>
