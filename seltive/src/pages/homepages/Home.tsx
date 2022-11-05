@@ -6,8 +6,7 @@ const Home = () => {
   return (
     <AuthProvider>
       
-            <Welcome/>
-      
+           
     </AuthProvider>
   )
 }

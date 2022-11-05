@@ -13,18 +13,23 @@ import Checkemail from "./pages/authpages/Checkemail";
 import Setnewpasword from "./pages/authpages/Setnewpasword";
 import ResetSuccesspage from "./pages/authpages/ResetSuccesspage";
 import Home from "./pages/homepages/Home";
+import Welcome from "./pages/homepages/Welcome";
+import Overview from "./pages/homepages/Overview";
 
 
 
 function App() {
   return (
-    <div className="font-barlow  bg-gray-50">
+    <div className="font-barlow  bg-indigo-50">
       
           
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<AppLayout />}>
                 <Route index element={<Home/>} />
+                <Route path="/welcome" element={<Welcome/>}/>
+                <Route path="/overview" element={<Overview/>}/>
+
             </Route>
             <Route path="/login"element={<Signin  />} />
             <Route path="/signup" element={<Signup />} />

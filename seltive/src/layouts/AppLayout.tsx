@@ -7,8 +7,8 @@ export default function AppLayout() {
       <section className="w-[200px] bg-white ">
         <Sidebar />
       </section>
-
-      <section className="flex justify-items-center align-middle m-auto bg-gray-50 max-w-[50%]">
+      {/* className="flex justify-items-center align-middle m-auto bg-gray-50 max-w-[50%]" */}
+      <section >
         <Outlet/>
       </section>
     </main>

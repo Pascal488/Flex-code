@@ -7,6 +7,8 @@ import { HiOutlineFolder } from "react-icons/hi";
 import { BsBookmark } from "react-icons/bs";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
 
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   
   const commonstyles = {
@@ -27,57 +29,61 @@ const Sidebar = () => {
       <div >
         <ul className="ml-0 mr-0 p-0 list-none text-gray-700">
           <span className="mb-5 p-2 text-sm font-extrabold">STORE</span>
+          <Link to='/overview'>
+
           <span
-            className="cursor-pointer  hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold   hover:border-l-gray-500"
+            className="cursor-pointer focus:bg-indigo-50 hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold   hover:border-l-gray-500"
             style={commonstyles}
           >
             <AiOutlineHome />
             <li>Overview</li>
           </span>
+          </Link>
+
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <BsBookmark />
             <li>Orders</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <HiOutlineFolder />
             <li>Products</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <BsPeople />
             <li>Customers</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <TbChartPie />
             <li>Analystics</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <HiOutlineReceiptRefund />
             <li>Promotion</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <AiOutlineHome />
             <li>Marketing</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <HiOutlineCog />
@@ -89,28 +95,28 @@ const Sidebar = () => {
         <ul className="list-none text-gray-700">
           <span className="p-2 text-sm font-extrabold">ACCOUNT</span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <BsSearch />
             <li>Explore</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <HiOutlineFolder />
             <li>Library</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <BsBookmark />
             <li>Saved Items</li>
           </span>
           <span
-            className=" cursor-pointer hover:bg-gray-100 hover:text-indigo-700 hover:font-extrabold"
+            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
             <HiOutlineCog />
