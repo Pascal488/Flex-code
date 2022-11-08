@@ -7,7 +7,6 @@ import { useMutation, gql } from "@apollo/client";
 import { useForm } from "react-hook-form";
 import { ColorRing } from "react-loader-spinner";
 
-
 export const Userdata = gql`
   mutation Register($user: UserInput!) {
     register(user: $user) {
@@ -78,9 +77,9 @@ const Signup = (props: any) => {
 
   return (
     <div>
-      <div className="flex  md:flex-col h-screen bg-white">
+      <div className="flex  md:flex-col h-screen bg-white ">
         <div
-          className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden"
+          className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden ipad:hidden"
           style={{
             backgroundImage:
               "url('ht://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA..')",
@@ -108,8 +107,8 @@ const Signup = (props: any) => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative">
-        {loading && (
+        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative ">
+          {loading && (
             <div className="absolute left-[45%] right-[50%] bottom-0 top-[35%] m-auto z-99 ">
               <ColorRing
                 visible={true}
@@ -126,11 +125,11 @@ const Signup = (props: any) => {
             </div>
           )}
           <form
-            className="flex flex-col justify-center py-12 px-10 ipad:justify-center ipad:m-auto"
+            className="flex flex-col justify-center py-12 px-10 ipad:justify-center ipad:m-auto md:w-screen md:h-screen"
             onSubmit={handleSubmit(onSubmit)}
           >
             <h1 className="text-[49px] text-gray-900 mb-3"> Join Seltive</h1>
-            <span className="flex gap-5 w-full">
+            <span className="flex gap-5 w-full md:flex-col">
               <span className="">
                 <label htmlFor="Name">Name</label> <br />
                 <input
@@ -140,7 +139,7 @@ const Signup = (props: any) => {
                   })}
                   onChange={onchange}
                   placeholder="Enter your name"
-                  className=" p-1.5 border border-black outline-none rounded-[5px] mb-5 bg-transparent w-[300px]"
+                  className=" p-1.5 border border-black outline-none rounded-[5px] mb-5 bg-transparent w-[300px] md:w-full"
                 />
                 {errors.name && (
                   <p className=" relative left-1 -top-5 text-red-500 text-xs ">
@@ -158,7 +157,7 @@ const Signup = (props: any) => {
                   })}
                   onChange={onchange}
                   placeholder="Enter your username."
-                  className="mb-4 p-1.5 border border-black outline-none rounded-[5px] bg-transparent w-[320px]"
+                  className="mb-4 p-1.5 border border-black outline-none rounded-[5px] bg-transparent w-[320px] md:w-full"
                 />
                 {errors.username && (
                   <p className=" relative left-1 -top-4 text-red-500 text-xs ">
