@@ -2,13 +2,15 @@ import React from "react";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useLazyQuery, gql} from "@apollo/client";
-
+import { useLazyQuery, gql } from "@apollo/client";
 
 import { useNavigate } from "react-router-dom";
+import Popup from "../../components/Popup";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Googleicon = <FcGoogle />;
 export const Appleicon = <AiFillApple />;
@@ -44,6 +46,10 @@ type Inputs = {
 };
 
 const Signin = (props: any) => {
+  const notify = () => {
+    toast.info("Invalid Username or Password!",{position:toast.POSITION.TOP_CENTER})
+  
+  }
   const navigate = useNavigate();
   const {
     register,
@@ -52,21 +58,31 @@ const Signin = (props: any) => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const [login, {loading }] = useLazyQuery(LoginQuery, {
-    onCompleted(data){
-    localStorage.setItem('token',data.login.token)
-    navigate('/')
-  },
+  const [login, { loading,error }] = useLazyQuery(LoginQuery, {
+   
+    onCompleted(data) {
+      localStorage.setItem("token", data.login.token);
+      navigate("/");
+    },
     variables: { login: getValues() },
   });
 
   const [passwordShown, setPasswordShown] = useState(false);
 
-  const onSubmit = (data: Inputs,e:any) => {
-    e.preventDefault()
+  const onSubmit = (data: Inputs, e: any) => {
+    e.preventDefault();
     console.log(data);
+    if(loading){
+      return(
+        <span>
+          Loading ...
+        </span>
+      )
+    }
+    if(error?.graphQLErrors){
+      notify()
+    }
     login();
-    
   };
 
   const togglePassword = () => {
@@ -75,8 +91,8 @@ const Signin = (props: any) => {
 
   return (
     <div>
-       
-      <div className="flex h-screen md:flex-col ">
+      <div className="flex h-screen md:flex-col bg-white">
+
         <div
           className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden"
           style={{
@@ -111,13 +127,13 @@ const Signin = (props: any) => {
             className="flex flex-col justify-center py-24 px-10 ipad:m-auto"
             onSubmit={handleSubmit(onSubmit)}
           >
+
             <h1 className="text-[49px] text-gray-900 mb-8 "> Welcome Back</h1>
             <label htmlFor="Email"> Username or Email</label>
             <input
               id="email"
               {...register("username", {
                 required: "Email is required",
-                
               })}
               type="text"
               placeholder="Enter your username or email."
@@ -155,13 +171,23 @@ const Signin = (props: any) => {
                 className="text-xs relative -top-5 left-[215px] md:hidden ipad:left-[50px] "
                 onClick={togglePassword}
               />
-              <span className="relative -top-5 text-xs" onClick={togglePassword}>Show Password</span>
+              <span
+                className="relative -top-5 text-xs"
+                onClick={togglePassword}
+              >
+                Show Password
+              </span>
             </span>
             <input
               type="submit"
               value="Sign In"
               className="bg-indigo-700 text-white p-1.5 cursor-pointer rounded-[5px]"
             />
+            {
+              error?.graphQLErrors && (
+                <ToastContainer/>
+              )
+            }
             <span className="text-center m-3">OR</span>
             <button className="p-1 gap-1 text-center bg-white text-black flex items-center justify-center mb-3 border border-gray-500 rounded-[5px]">
               {Googleicon}Continue with Google
