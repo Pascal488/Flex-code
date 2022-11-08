@@ -72,7 +72,6 @@ const Signin = (props: any) => {
   const onSubmit = (data: Inputs, e: any) => {
     e.preventDefault();
     console.log(data);
-
     if (error?.graphQLErrors) {
       notify();
     }

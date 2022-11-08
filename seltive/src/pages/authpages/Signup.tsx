@@ -5,6 +5,8 @@ import { Appleicon } from "./Signin";
 import { Link, useNavigate } from "react-router-dom";
 import { useMutation, gql } from "@apollo/client";
 import { useForm } from "react-hook-form";
+import { ColorRing } from "react-loader-spinner";
+
 
 export const Userdata = gql`
   mutation Register($user: UserInput!) {
@@ -107,6 +109,22 @@ const Signup = (props: any) => {
           </div>
         </div>
         <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative">
+        {loading && (
+            <div className="absolute left-[45%] right-[50%] bottom-0 top-[35%] m-auto z-99 ">
+              <ColorRing
+                visible={true}
+                height="100"
+                width="100"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+                wrapperClass="blocks-wrapper"
+                colors={["#4338CA", "#FFFFFF", "#FFFFFF", "#FFFFFF", "#4338CA"]}
+              />
+            </div>
+          )}
           <form
             className="flex flex-col justify-center py-12 px-10 ipad:justify-center ipad:m-auto"
             onSubmit={handleSubmit(onSubmit)}
