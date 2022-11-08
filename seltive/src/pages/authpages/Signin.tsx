@@ -8,8 +8,9 @@ import { useLazyQuery, gql } from "@apollo/client";
 
 import { useNavigate } from "react-router-dom";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ColorRing } from "react-loader-spinner";
 
 export const Googleicon = <FcGoogle />;
 export const Appleicon = <AiFillApple />;
@@ -46,9 +47,10 @@ type Inputs = {
 
 const Signin = (props: any) => {
   const notify = () => {
-    toast.info("Invalid Username or Password!",{position:toast.POSITION.TOP_CENTER})
-  
-  }
+    toast.info("Invalid Username or Password!", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
   const navigate = useNavigate();
   const {
     register,
@@ -57,8 +59,7 @@ const Signin = (props: any) => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const [login, { loading,error }] = useLazyQuery(LoginQuery, {
-   
+  const [login, { loading, error }] = useLazyQuery(LoginQuery, {
     onCompleted(data) {
       localStorage.setItem("token", data.login.token);
       navigate("/");
@@ -71,15 +72,9 @@ const Signin = (props: any) => {
   const onSubmit = (data: Inputs, e: any) => {
     e.preventDefault();
     console.log(data);
-    if(loading){
-      return(
-        <span>
-          Loading ...
-        </span>
-      )
-    }
-    if(error?.graphQLErrors){
-      notify()
+
+    if (error?.graphQLErrors) {
+      notify();
     }
     login();
   };
@@ -91,7 +86,6 @@ const Signin = (props: any) => {
   return (
     <div>
       <div className="flex h-screen md:flex-col bg-white">
-
         <div
           className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden"
           style={{
@@ -122,11 +116,26 @@ const Signin = (props: any) => {
           </div>
         </div>
         <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative">
+          {loading && (
+            <div className="absolute left-[45%] right-[50%] bottom-0 top-[35%] m-auto z-99 ">
+              <ColorRing
+                visible={true}
+                height="100"
+                width="100"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+                wrapperClass="blocks-wrapper"
+                colors={["#4338CA", "#FFFFFF", "#FFFFFF", "#FFFFFF", "#4338CA"]}
+              />
+            </div>
+          )}
           <form
             className="flex flex-col justify-center py-24 px-10 ipad:m-auto"
             onSubmit={handleSubmit(onSubmit)}
           >
-
             <h1 className="text-[49px] text-gray-900 mb-8 "> Welcome Back</h1>
             <label htmlFor="Email"> Username or Email</label>
             <input
@@ -182,11 +191,7 @@ const Signin = (props: any) => {
               value="Sign In"
               className="bg-indigo-700 text-white p-1.5 cursor-pointer rounded-[5px]"
             />
-            {
-              error?.graphQLErrors && (
-                <ToastContainer/>
-              )
-            }
+            {error?.graphQLErrors && <ToastContainer />}
             <span className="text-center m-3">OR</span>
             <button className="p-1 gap-1 text-center bg-white text-black flex items-center justify-center mb-3 border border-gray-500 rounded-[5px]">
               {Googleicon}Continue with Google
