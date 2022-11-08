@@ -11,7 +11,7 @@ const Setnewpasword = () => {
   };
   return (
     <div>
-      <div className="flex flex-col justify-center items-center p-[10%] text-center h-screen md:justify-center">
+      <div className="flex flex-col justify-center items-center p-[10%] text-center h-screen md:justify-center  bg-white">
         <span className="w-[250px] h-[250px] bg-indigo-200 rounded-full flex items-center justify-center mb-3">
           <HiKey className="w-[150px] h-[150px] text-indigo-700" />
         </span>

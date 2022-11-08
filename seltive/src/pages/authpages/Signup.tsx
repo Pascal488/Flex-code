@@ -76,7 +76,7 @@ const Signup = (props: any) => {
 
   return (
     <div>
-      <div className="flex  md:flex-col h-screen ">
+      <div className="flex  md:flex-col h-screen bg-white">
         <div
           className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden"
           style={{
@@ -131,7 +131,8 @@ const Signup = (props: any) => {
                 )}
               </span>
               <span className="">
-                <label htmlFor="Username">Username</label><br/>
+                <label htmlFor="Username">Username</label>
+                <br />
                 <input
                   type="text"
                   {...registerValidate("username", {

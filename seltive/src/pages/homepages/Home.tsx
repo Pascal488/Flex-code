@@ -4,10 +4,14 @@ import Welcome from './Welcome'
 
 const Home = () => {
   return (
-    <AuthProvider>
+    <div >
+
+    <AuthProvider >
       
            
     </AuthProvider>
+    </div>
+
   )
 }
 

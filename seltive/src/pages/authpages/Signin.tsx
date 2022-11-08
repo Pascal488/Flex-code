@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 import { useLazyQuery, gql } from "@apollo/client";
 
 import { useNavigate } from "react-router-dom";
-import Popup from "../../components/Popup";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -1,13 +1,13 @@
 import React from "react";
-import { BsPeople,BsCart3 } from "react-icons/bs";
-import {HiOutlineCursorClick} from "react-icons/hi";
-import {MdOutlinePayments} from "react-icons/md";
-import {FaExternalLinkAlt} from "react-icons/fa"
+import { BsPeople, BsCart3 } from "react-icons/bs";
+import { HiOutlineCursorClick } from "react-icons/hi";
+import { MdOutlinePayments } from "react-icons/md";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Overview = () => {
   return (
     <div>
-      <div>
+      <div >
         <div className="mb-10">
           <h1 className="text-3xl mt-5">Overview</h1>
           <span className="text-gray-600">
@@ -15,7 +15,7 @@ const Overview = () => {
           </span>
         </div>
 
-        <div className="flex w-full justify-center">
+        <div className=" md:flex-col  flex w-full justify-center">
           <div className="flex-1 flex flex-wrap gap-5">
             <div className="bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm">
               <span>
@@ -59,7 +59,7 @@ const Overview = () => {
             </div>
           </div>
           <div>
-            <div className="flex-2 flex bg-white shadow-md p-5 w-[300px] justify-self-end relative -left-[50px]">
+            <div className="flex-2 flex bg-white shadow-md p-5 w-[300px] justify-self-end relative -left-[50px] rounded-md md:-left-0">
               <div>
                 <h1 className="mb-5 font-extrabold text-sm">Quick Actions</h1>
                 <ul className="list-none flex flex-col gap-6 text-sm text-indigo-600 font-extrabold cursor-pointer">
@@ -70,7 +70,6 @@ const Overview = () => {
                   </span>
                   <span className="flex items-center gap-3 hover:underline ">
                     <HiOutlineCursorClick className="text-xl" />
-
 
                     <li>Create New Product</li>
                   </span>

@@ -7,7 +7,7 @@ import Image from "messageicon.png";
 const Checkemail = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-center p-[10%] text-center">
+      <div className="flex flex-col justify-center items-center p-[10%] text-center h-screen bg-white">
         <span className="w-60 h-60 bg-indigo-200 rounded-full flex items-center justify-center mb-10">
           <BsEnvelopeFill className="w-32 h-32 text-indigo-700" />
         </span>
