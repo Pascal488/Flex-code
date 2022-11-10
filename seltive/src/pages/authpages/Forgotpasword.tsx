@@ -50,9 +50,9 @@ const Forgotpasword = () => {
 
   return (
     <div>
-      <div className="flex flex-col justify-center items-center p-[10%] text-center">
-        <span className="w-[250px] h-[250px] bg-indigo-200 rounded-full flex items-center justify-center mb-10">
-          <FaLock className="w-[150px] h-[150px] text-indigo-700" />
+      <div className="flex flex-col justify-center items-center p-[10%] text-center md:h-screen ipad:h-screen">
+        <span className="w-[250px] h-[250px] bg-indigo-200 rounded-full flex items-center justify-center mb-10 md:w-[180px] md:h-[180px]">
+          <FaLock className="w-[150px] h-[150px] text-indigo-700 md:w-[100] md:h-[100px]" />
         </span>
         <h1 className="font-semibold text-[39px]">Forgort Password</h1>
         <p className="mb-3">
