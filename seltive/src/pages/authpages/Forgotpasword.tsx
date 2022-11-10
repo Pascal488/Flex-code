@@ -15,10 +15,14 @@ export const ForgotpaswordQuery = gql`
     }
   }
 `;
+type Input = {
+  email:string;
+}
 const Forgotpasword = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [emailfield, setEmailfield] = useState({
     email: "",
+
   });
   const getemailValue = (e: any) => {
     setEmailfield({
@@ -30,12 +34,14 @@ const Forgotpasword = () => {
     ForgotpaswordQuery,
     {
       onCompleted(data) {
-        navigate("/checkemail")
-
+        navigate("/checkemail");
       },
-      variables: { forgotpassword: emailfield },
+      variables: { identifier: emailfield },
+
     }
   );
+  console.log(emailfield)
+
   const handlesubmit = (e: any) => {
     e.preventDefault();
     console.log(data);
@@ -58,7 +64,7 @@ const Forgotpasword = () => {
             {" "}
             Username or Email
           </label>
-          <br/>
+          <br />
           <input
             id="email"
             name="email"
@@ -67,9 +73,9 @@ const Forgotpasword = () => {
             placeholder="Enter your username or email."
             className="px-4 py-1 border border-black outline-none rounded-[5px] mb-5 w-full md:w-full ipad:w-full bg-transparent"
           />
-          
+
           <input
-            type="button"
+            type="submit"
             value="Reset Password"
             className="bg-indigo-700 text-white p-1.5 cursor-pointer rounded-[5px] w-[50%] md:w-full ipad:w-full"
           />
