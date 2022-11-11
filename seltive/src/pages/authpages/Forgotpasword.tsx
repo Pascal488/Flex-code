@@ -16,13 +16,12 @@ export const ForgotpaswordQuery = gql`
   }
 `;
 type Input = {
-  email:string;
-}
+  email: string;
+};
 const Forgotpasword = () => {
   const navigate = useNavigate();
   const [emailfield, setEmailfield] = useState({
     email: "",
-
   });
   const getemailValue = (e: any) => {
     setEmailfield({
@@ -36,11 +35,10 @@ const Forgotpasword = () => {
       onCompleted(data) {
         navigate("/checkemail");
       },
-      variables: { identifier: emailfield },
-
+      variables: { identifier: emailfield.email },
     }
   );
-  console.log(emailfield)
+  console.log(emailfield);
 
   const handlesubmit = (e: any) => {
     e.preventDefault();
