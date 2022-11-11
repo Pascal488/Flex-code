@@ -63,14 +63,13 @@ const Signup = (props: any) => {
   const [register, { loading, error, data }] = useMutation(Userdata, {
     update(result) {
       console.log(result);
-      navigate("/login");
+      navigate("/confirm");
     },
 
     variables: { user: variables },
   });
 
   const onSubmit = (data: Inputs, e: any) => {
-    //console.log(data);
     e.preventDefault();
     register();
   };

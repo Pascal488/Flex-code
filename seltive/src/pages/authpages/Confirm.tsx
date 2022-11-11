@@ -40,10 +40,11 @@ const Confirm = () => {
             <span className="w-[250px] h-[250px] bg-indigo-200 rounded-full flex items-center justify-center mb-10">
               <BsEnvelopeFill className="w-[150px] h-[150px] text-indigo-700" />
             </span>
-            <h1 className="font-semibold text-[39px]">Check your email</h1>
+            <h1 className="font-semibold text-[39px]">Confirm your email</h1>
             <p>
-              We have sent a password reset link to <br />
-              <span className="font-bold text-black">jonedone@gmail.com</span>
+              We have sent a confirmation email to <br />
+              <span className="font-bold text-black">jonedone@gmail.com</span><br />
+              use the link in the email to perform confirmation
             </p>
             <span className=" text-xs text-center p-3 flex items-center gap-1 ">
               <span>Didn't receive email?</span>
