@@ -252,7 +252,7 @@ const Overview = () => {
                 <li>1000 Views</li>
               </span>
             </span>
-             <span className="flex items-center gap-1 mb-6">
+            <span className="flex items-center gap-1 mb-6">
               <img
                 src="
               https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

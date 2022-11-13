@@ -13,7 +13,7 @@ import Setnewpasword from "./pages/authpages/Setnewpasword";
 import ResetSuccesspage from "./pages/authpages/ResetSuccesspage";
 import Home from "./pages/homepages/Home";
 import Welcome from "./pages/homepages/Welcome";
-import Overview from "./pages/homepages/Overview";
+import Overview from "./pages/homepages/overview/Overview";
 
 
 
