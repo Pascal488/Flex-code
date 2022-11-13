@@ -3,11 +3,9 @@ import { BsPeople, BsCart3 } from "react-icons/bs";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import { MdOutlinePayments } from "react-icons/md";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import "./Table.css"
+import "./Table.css";
 
 const Overview = () => {
- 
-
   return (
     <div>
       <div className="mb-2">
@@ -59,7 +57,7 @@ const Overview = () => {
           </div>
         </div>
         <div>
-          <div className="flex-2 flex bg-white shadow-md p-5 w-[300px] justify-self-end relative -left-[50px] rounded-md md:-left-0">
+          <div className="flex-2 flex bg-white shadow-md p-5 w-[310px] justify-self-end relative -left-[50px] rounded-md md:-left-0">
             <div>
               <h1 className="mb-5 font-extrabold text-sm">Quick Actions</h1>
               <ul className="list-none flex flex-col gap-6 text-sm text-indigo-600 font-extrabold cursor-pointer">
@@ -91,129 +89,200 @@ const Overview = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white shadow-xl w-[61%] rounded-md p-3">
-        <div className="flex justify-between p-1.5 ">
-          <span className="text-xl text-gray-700 font-bold">Most Selling Products</span>
-          <span className="text-sm text-indigo-600 cursor-pointer">View All Products</span>
+
+      <div className="flex gap-[116px]">
+        <div className="bg-white shadow-xl w-[61%] rounded-md p-3">
+          <div className="flex justify-between p-1.5 ">
+            <span className="text-xl text-gray-700 font-bold">
+              Most Selling Products
+            </span>
+            <span className="text-sm text-indigo-600 cursor-pointer">
+              View All Products
+            </span>
+          </div>
+          <div>
+            <table className="w-full">
+              <thead>
+                <tr className="text-gray-700">
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Total sales</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm text-gray-500">
+                <tr>
+                  <span className="flex items-center">
+                    <td>
+                      <img
+                        src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+                        alt=""
+                        className="w-7 h-7 rounded-sm bg-black"
+                      />
+                    </td>
+                    <td>Logo mockup with 3d logo in wall</td>
+                  </span>
+                  <td>TZS 4,000</td>
+                  <td>TZS 40,000</td>
+                </tr>
+                <tr>
+                  <span className="flex items-center">
+                    <td>
+                      <img
+                        src="
+              https://images.pexels.com/photos/821718/pexels-photo-821718.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt=""
+                        className="w-7 h-7 rounded-sm bg-black"
+                      />
+                    </td>
+                    <td>Paper style international women's day sale</td>
+                  </span>
+                  <td>TZS 4,000</td>
+                  <td>TZS 40,000</td>
+                </tr>
+                <tr>
+                  <span className="flex items-center">
+                    <td>
+                      <img
+                        src="
+              https://images.pexels.com/photos/6476582/pexels-photo-6476582.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt=""
+                        className="w-7 h-7 rounded-sm bg-black"
+                      />
+                    </td>
+                    <td>Watercolor international women's day illustration</td>
+                  </span>
+                  <td>TZS 4,000</td>
+                  <td>TZS 40,000</td>
+                </tr>
+                <tr>
+                  <span className="flex items-center">
+                    <td>
+                      <img
+                        src="
+              https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt=""
+                        className="w-7 h-7 rounded-sm bg-black"
+                      />
+                    </td>
+                    <td>3d rendering of delicious cheese burger</td>
+                  </span>
+                  <td>TZS 4,000</td>
+                  <td>TZS 40,000</td>
+                </tr>
+                <tr>
+                  <span className="flex items-center">
+                    <td>
+                      <img
+                        src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+                        alt=""
+                        className="w-7 h-7 rounded-sm bg-black"
+                      />
+                    </td>
+                    <td>Burger box packaging with editable design mockup</td>
+                  </span>
+                  <td>TZS 4,000</td>
+                  <td>TZS 40,000</td>
+                </tr>
+                <tr>
+                  <span className="flex items-center">
+                    <td>
+                      <img
+                        src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+                        alt=""
+                        className="w-7 h-7 rounded-sm bg-black"
+                      />
+                    </td>
+                    <td>Transparent food container mockup</td>
+                  </span>
+                  <td>TZS 4,000</td>
+                  <td>TZS 40,000</td>
+                </tr>
+                <tr>
+                  <span className="flex items-center">
+                    <td>
+                      <img
+                        src="
+              https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt=""
+                        className="w-7 h-7 rounded-sm bg-black"
+                      />
+                    </td>
+                    <td>3d rendering of delicious cheese burger</td>
+                  </span>
+                  <td>TZS 4,000</td>
+                  <td>TZS 40,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div>
-          <table className="w-full">
-            <thead >
-            <tr className="text-gray-700">
-              <th>Product</th>
-              <th>Price</th>
-              <th>Total sales</th>
-            </tr>
-            </thead>
-            <tbody className="text-sm text-gray-500">
-            <tr>
-              <span className="flex items-center">
-              <td>
+        <div className="bg-white shadow-sm rounded-md p-3 text-sm w-[310px]">
+          <h1 className="text-[20px] p-1.5">Most Viewed Products</h1>
+          <ul className="list-none p-3">
+            <span className="flex items-center gap-1 mb-6">
               <img
-              src="
-                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-7 h-7 rounded-sm bg-black"
-            />
-              </td>
-              <td>Logo mockup with 3d logo in wall</td>
+                src="
+              https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+                className="w-16 h-16 rounded-sm bg-black"
+              />
+              <span>
+                <li>
+                  Logo mockup with <br />
+                  3d logo in wall
+                </li>
+                <li>1000 Views</li>
               </span>
-              <td>TZS 4,000</td>
-              <td>TZS 40,000</td>
-            </tr>
-            <tr>
-            <span className="flex items-center">
-              <td>
+            </span>
+            <span className="flex items-center gap-1 mb-6">
               <img
-              src="
-                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-7 h-7 rounded-sm bg-black"
-            />
-              </td>
-              <td>Paper style international women's day sale</td>
+                src="
+              https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+                className="w-16 h-16 rounded-sm bg-black"
+              />
+              <span>
+                <li>
+                  Logo mockup with <br />
+                  3d logo in wall
+                </li>
+                <li>1000 Views</li>
               </span>
-              <td>TZS 4,000</td>
-              <td>TZS 40,000</td>
-            </tr>
-            <tr>
-            <span className="flex items-center">
-              <td>
+            </span>
+             <span className="flex items-center gap-1 mb-6">
               <img
-              src="
-                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-7 h-7 rounded-sm bg-black"
-            />
-              </td>
-              <td>Watercolor international women's day illustration</td>
+                src="
+              https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+                className="w-16 h-16 rounded-sm bg-black"
+              />
+              <span>
+                <li>
+                  Logo mockup with <br />
+                  3d logo in wall
+                </li>
+                <li>1000 Views</li>
               </span>
-              <td>TZS 4,000</td>
-              <td>TZS 40,000</td>
-            </tr>
-            <tr>
-            <span className="flex items-center">
-              <td>
+            </span>
+            <span className="flex items-center gap-1 ">
               <img
-              src="
-                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-7 h-7 rounded-sm bg-black"
-            />
-              </td>
-              <td>3d rendering of delicious cheese burger</td>
+                src="
+              https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+                className="w-16 h-16 rounded-sm bg-black"
+              />
+              <span>
+                <li>
+                  Logo mockup with <br />
+                  3d logo in wall
+                </li>
+                <li>1000 Views</li>
               </span>
-              <td>TZS 4,000</td>
-              <td>TZS 40,000</td>
-            </tr>
-            <tr>
-            <span className="flex items-center">
-              <td>
-              <img
-              src="
-                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-7 h-7 rounded-sm bg-black"
-            />
-              </td>
-              <td>Burger box packaging with editable design mockup</td>
-              </span>
-              <td>TZS 4,000</td>
-              <td>TZS 40,000</td>
-            </tr>
-            <tr>
-            <span className="flex items-center">
-              <td>
-              <img
-              src="
-                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-7 h-7 rounded-sm bg-black"
-            />
-              </td>
-              <td>Transparent food container mockup</td>
-              </span>
-              <td>TZS 4,000</td>
-              <td>TZS 40,000</td>
-            </tr>
-            <tr>
-            <span className="flex items-center">
-              <td>
-              <img
-              src="
-                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-7 h-7 rounded-sm bg-black"
-            />
-              </td>
-              <td>3d rendering of delicious cheese burger</td>
-              </span>
-              <td>TZS 4,000</td>
-              <td>TZS 40,000</td>
-            </tr>
-           
-            </tbody>
-          </table>
+            </span>
+          </ul>
         </div>
       </div>
     </div>
