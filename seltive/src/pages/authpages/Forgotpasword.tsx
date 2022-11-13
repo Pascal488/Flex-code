@@ -80,7 +80,7 @@ const Forgotpasword = () => {
         </form>
         <span className="text-center p-3 flex items-center gap-1 text-indigo-700 font-bold">
           <AiOutlineArrowLeft className="" />
-          <Link to="/">Back to Sign In</Link>
+          <Link to="/login">Back to Sign In</Link>
         </span>
       </div>
     </div>
