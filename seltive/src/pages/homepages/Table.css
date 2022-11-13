@@ -1,5 +1,7 @@
-
 th, td {
     padding: 8px;
     text-align: left;
   }
+  tr:hover {
+    cursor: pointer;
+   color: #4338CA;}

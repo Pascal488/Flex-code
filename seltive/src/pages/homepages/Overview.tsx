@@ -10,8 +10,8 @@ const Overview = () => {
 
   return (
     <div>
-      <div className="mb-3">
-        <h1 className="text-3xl mt-5">Overview</h1>
+      <div className="mb-2">
+        <h1 className="text-3xl mt-2">Overview</h1>
         <span className="text-gray-600">
           Summary of your store for March 4, 2022
         </span>
@@ -91,10 +91,10 @@ const Overview = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white shadow-xl w-[61%] rounded-md p-4">
+      <div className="bg-white shadow-xl w-[61%] rounded-md p-3">
         <div className="flex justify-between p-1.5 ">
           <span className="text-xl text-gray-700 font-bold">Most Selling Products</span>
-          <span className="text-sm text-indigo-600">View All Products</span>
+          <span className="text-sm text-indigo-600 cursor-pointer">View All Products</span>
         </div>
         <div>
           <table className="w-full">
@@ -105,39 +105,109 @@ const Overview = () => {
               <th>Total sales</th>
             </tr>
             </thead>
-            <tbody className="text-sm">
+            <tbody className="text-sm text-gray-500">
             <tr>
+              <span className="flex items-center">
+              <td>
+              <img
+              src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+              alt=""
+              className="w-7 h-7 rounded-sm bg-black"
+            />
+              </td>
               <td>Logo mockup with 3d logo in wall</td>
+              </span>
               <td>TZS 4,000</td>
               <td>TZS 40,000</td>
             </tr>
             <tr>
+            <span className="flex items-center">
+              <td>
+              <img
+              src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+              alt=""
+              className="w-7 h-7 rounded-sm bg-black"
+            />
+              </td>
               <td>Paper style international women's day sale</td>
+              </span>
               <td>TZS 4,000</td>
               <td>TZS 40,000</td>
             </tr>
             <tr>
+            <span className="flex items-center">
+              <td>
+              <img
+              src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+              alt=""
+              className="w-7 h-7 rounded-sm bg-black"
+            />
+              </td>
               <td>Watercolor international women's day illustration</td>
+              </span>
               <td>TZS 4,000</td>
               <td>TZS 40,000</td>
             </tr>
             <tr>
+            <span className="flex items-center">
+              <td>
+              <img
+              src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+              alt=""
+              className="w-7 h-7 rounded-sm bg-black"
+            />
+              </td>
               <td>3d rendering of delicious cheese burger</td>
+              </span>
               <td>TZS 4,000</td>
               <td>TZS 40,000</td>
             </tr>
             <tr>
+            <span className="flex items-center">
+              <td>
+              <img
+              src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+              alt=""
+              className="w-7 h-7 rounded-sm bg-black"
+            />
+              </td>
               <td>Burger box packaging with editable design mockup</td>
+              </span>
               <td>TZS 4,000</td>
               <td>TZS 40,000</td>
             </tr>
             <tr>
+            <span className="flex items-center">
+              <td>
+              <img
+              src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+              alt=""
+              className="w-7 h-7 rounded-sm bg-black"
+            />
+              </td>
               <td>Transparent food container mockup</td>
+              </span>
               <td>TZS 4,000</td>
               <td>TZS 40,000</td>
             </tr>
             <tr>
+            <span className="flex items-center">
+              <td>
+              <img
+              src="
+                  https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
+              alt=""
+              className="w-7 h-7 rounded-sm bg-black"
+            />
+              </td>
               <td>3d rendering of delicious cheese burger</td>
+              </span>
               <td>TZS 4,000</td>
               <td>TZS 40,000</td>
             </tr>
