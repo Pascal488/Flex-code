@@ -2,7 +2,14 @@ import React from "react";
 import { BsEnvelopeFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Confirm = () => {
+
+const data = {
+  email:"email@gmail.com"
+
+}
+
+
+const Confirm = (props:any) => {
   return (
     <div>
       <div className="flex h-screen md:flex-col">
@@ -43,7 +50,7 @@ const Confirm = () => {
             <h1 className="font-semibold text-[39px]">Confirm your email</h1>
             <p>
               We have sent a confirmation email to <br />
-              <span className="font-bold text-black">jonedone@gmail.com</span><br />
+              <span className="font-bold text-black mb-3 mr-2">{data.email}</span><br/>
               use the link in the email to perform confirmation
             </p>
             <span className=" text-xs text-center p-3 flex items-center gap-1 ">

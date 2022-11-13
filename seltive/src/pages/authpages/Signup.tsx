@@ -62,7 +62,7 @@ const Signup = (props: any) => {
 
   const [register, { loading, error, data }] = useMutation(Userdata, {
     update(result) {
-      console.log(result);
+      //console.log(result);
       navigate("/confirm");
     },
 
