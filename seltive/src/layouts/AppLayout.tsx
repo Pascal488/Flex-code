@@ -10,7 +10,7 @@ export default function AppLayout() {
           <Sidebar />
         </section>
         {/* className="flex justify-items-center align-middle m-auto bg-gray-50 max-w-[50%]" */}
-        <section >
+        <section  >
           <Outlet/>
         </section>
       </main>

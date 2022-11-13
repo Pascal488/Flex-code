@@ -4,10 +4,15 @@ import Overview from './overview/Overview'
 import Welcome from './Welcome'
 
 const Home = () => {
+const user:boolean = true;
+  
   return (
-    <div >
-    <AuthProvider >
-      <Overview/> 
+    <div>
+    <AuthProvider>
+    {user ?
+    <Welcome/>:
+    <Overview/>
+    }
     </AuthProvider>
     </div>
 
