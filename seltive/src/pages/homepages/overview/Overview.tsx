@@ -19,7 +19,7 @@ const Overview = () => {
 
       <div className="mb-5 md:flex-col  flex w-full justify-center">
         <div className="flex-1 flex flex-wrap gap-5">
-          <div className="bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm">
+          <div className="transition ease-in-out delay-150 bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm hover:scale-105 hover:duration-300 cursor-pointer">
             <span>
               <h1 className="font-extrabold">Earnings</h1>
               <p className="text-sm">Updated 15 minutes ago</p>
@@ -30,7 +30,7 @@ const Overview = () => {
               </p>
             </span>
           </div>
-          <div className="bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm">
+          <div className="transition ease-in-out delay-150 bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm hover:scale-105 hover:duration-300 cursor-pointer">
             <span>
               <h1 className="font-extrabold">Unique Visitors</h1>
               <p className="text-sm">Updated 15 minutes ago</p>
@@ -39,7 +39,7 @@ const Overview = () => {
               <p className="text-3xl text-indigo-600 font-semibold">1000</p>
             </span>
           </div>
-          <div className="bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm">
+          <div className="transition ease-in-out delay-150 bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm hover:scale-105 hover:duration-300 cursor-pointer">
             <span>
               <h1 className="font-extrabold">Conversion Rate</h1>
               <p className="text-sm">Updated 15 minutes ago</p>
@@ -48,7 +48,7 @@ const Overview = () => {
               <p className="text-3xl text-indigo-600 font-semibold">4%</p>
             </span>
           </div>
-          <div className="bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm">
+          <div className="transition ease-in-out delay-150 bg-white shadow-md py-3 px-5 flex flex-col justify-between w-[360px] gap-5 rounded-sm hover:scale-105 hover:duration-300 cursor-pointer">
             <span>
               <h1 className="font-extrabold">Average Sale Value</h1>
               <p className="text-sm">Updated 15 minutes ago</p>
@@ -94,9 +94,8 @@ const Overview = () => {
 
       <div className="flex gap-[116px]">
         <Overviewtable />
-        <Mostviewedproduct/>
+        <Mostviewedproduct />
       </div>
-      
     </div>
   );
 };

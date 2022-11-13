@@ -4,4 +4,8 @@ th, td {
   }
   tr:hover {
     cursor: pointer;
-   color: #4338CA;}
+   color: #4338CA;
+   background-color: #F8FAFC;
+   font-weight: 800;
+  
+  }
