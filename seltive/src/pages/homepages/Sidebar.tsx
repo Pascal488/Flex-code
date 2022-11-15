@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
-import { HiOutlineCog } from "react-icons/hi";
+import { HiOutlineCog, HiOutlineSpeakerphone } from "react-icons/hi";
 import { TbChartPie } from "react-icons/tb";
 import { BsSearch, BsPeople } from "react-icons/bs";
 import { HiOutlineFolder } from "react-icons/hi";
@@ -78,7 +78,7 @@ const Sidebar = () => {
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
           >
-            <AiOutlineHome />
+            <HiOutlineSpeakerphone />
             <li>Marketing</li>
           </span>
           <span
