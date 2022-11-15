@@ -74,6 +74,7 @@ const Sidebar = () => {
             <HiOutlineReceiptRefund />
             <li>Promotion</li>
           </span>
+          <Link to="/marketing">
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
@@ -81,6 +82,7 @@ const Sidebar = () => {
             <HiOutlineSpeakerphone />
             <li>Marketing</li>
           </span>
+          </Link>
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold"
             style={commonstyles}
