@@ -15,6 +15,7 @@ import Home from "./pages/homepages/Home";
 import Welcome from "./pages/homepages/Welcome";
 import Overview from "./pages/homepages/overview/Overview";
 import Marketing from "./pages/homepages/marketing/Marketing";
+import Promotion from "./pages/homepages/promotion/Promotion";
 
 
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/welcome" element={<Welcome/>}/>
                 <Route path="/overview" element={<Overview/>}/>
                 <Route path="/marketing" element={<Marketing/>}/>
+                <Route path="/promotion" element={<Promotion/>}/>
             </Route>
             <Route path="/login"element={<Signin  />} />
             <Route path="/signup" element={<Signup />} />

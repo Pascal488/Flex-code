@@ -34,7 +34,7 @@ const Marketing = () => {
         Integrate various digital marketing tools
       </p>
       <div style={styles.maincontainer}>
-        <div className="flex flex-wrap gap-5 max-w-3xl">
+        <div className="transition ease-in-out delay-150 flex flex-wrap gap-5 max-w-3xl ">
           <div style={styles.container} className=" shadow-md ">
             <span className="text-2xl">{Googleicon}</span>
             <span style={styles.textstyle}>Google Ads</span>
