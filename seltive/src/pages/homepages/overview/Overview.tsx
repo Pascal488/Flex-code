@@ -36,6 +36,7 @@ const Overview = () => {
               <p className="text-sm">Updated 15 minutes ago</p>
             </span>
             <span>
+              
               <p className="text-3xl text-indigo-600 font-semibold">1000</p>
             </span>
           </div>
