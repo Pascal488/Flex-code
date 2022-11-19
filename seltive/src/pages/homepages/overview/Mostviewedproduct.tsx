@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mostviewedproduct = () => {
   return (
-    <div className="bg-white shadow-sm rounded-md p-3 text-sm w-[310px] dark:bg-slate-900 dark:text-gray-700 dark:font-bold">
+    <div className="bg-white shadow-sm rounded-md p-3 text-sm w-[310px] dark:bg-slate-900 dark:text-gray-500 dark:font-bold">
     <h1 className="text-[20px] p-1.5">Most Viewed Products</h1>
     <ul className="list-none p-3">
       <span className="flex items-center gap-1 mb-6">

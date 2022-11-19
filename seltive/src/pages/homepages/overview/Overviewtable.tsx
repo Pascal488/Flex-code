@@ -4,7 +4,7 @@ const Overviewtable = () => {
   return (
     <div className=" bg-white shadow-xl w-[61%] rounded-md p-3 dark:bg-slate-900">
       <div className="flex justify-between p-1.5 items-center">
-        <span className="text-xl text-gray-700 font-bold">
+        <span className="text-xl text-gray-700 font-bold dark:text-gray-500">
           Most Selling Products
         </span>
         <span className="text-sm text-indigo-600 cursor-pointer hover:underline">
@@ -15,7 +15,7 @@ const Overviewtable = () => {
       <div>
         <table className="w-full">
           <thead>
-            <tr className="text-gray-700">
+            <tr className="text-gray-700 dark:text-gray-500">
               <th>Product</th>
               <th>Price</th>
               <th>Total sales</th>
