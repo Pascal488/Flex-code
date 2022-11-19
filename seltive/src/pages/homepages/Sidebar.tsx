@@ -6,12 +6,13 @@ import { BsSearch, BsPeople } from "react-icons/bs";
 import { HiOutlineFolder } from "react-icons/hi";
 import { BsBookmark } from "react-icons/bs";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
-import { MdOutlinePayments } from "react-icons/md";
+import { MdOutlineLightMode, MdOutlinePayments } from "react-icons/md";
+import {CiDark} from "react-icons/ci"
 
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('');
 
   useEffect(() => {
     if(window.matchMedia('(prefers-color-scheme: dark)').matches){
@@ -30,8 +31,17 @@ const Sidebar = () => {
     }
   }, [theme]);
 
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+  const handleThemeLight= () => {
+    if(theme === "dark"){
+      setTheme("light" )
+
+    }
+    
+  };
+  const handleThemedark = () => {
+    if(theme === "light"){
+      setTheme("dark" )
+    }
   };
 
   
@@ -52,14 +62,7 @@ const Sidebar = () => {
         
         
       </div>
-      <div className="flex gap-5 justify-between">
-        <span className="w-8 h-8  bg-indigo-600 cursor-pointer" onClick={handleThemeSwitch}>
-          Dark
-        </span>
-        <span className="w-5 h-5  bg-indigo-600">
-          Light
-        </span>
-        </div>
+      
       <div>
        
         <ul className="ml-0 mr-0 p-0 list-none text-gray-700">
@@ -162,6 +165,14 @@ const Sidebar = () => {
           </span>
         </ul>
       </div>
+      <div className="flex gap-5 ">
+        <span className="w-8 h-8 bg-gray-200 dark:bg-gray-800 cursor-pointer flex items-center justify-center rounded-sm text-2xl" onClick={handleThemedark}>
+       <CiDark />
+        </span>
+        <span className="w-8 h-8 bg-gray-200 dark:bg-gray-800 cursor-pointer flex items-center justify-center rounded-sm text-2xl" onClick={handleThemeLight}>
+         <MdOutlineLightMode/>
+        </span>
+        </div>
     </div>
   );
 };
