@@ -2,7 +2,7 @@ import React from "react";
 
 const Overviewtable = () => {
   return (
-    <div className=" bg-white shadow-xl w-[61%] rounded-md p-3">
+    <div className=" bg-white shadow-xl w-[61%] rounded-md p-3 dark:bg-slate-900">
       <div className="flex justify-between p-1.5 items-center">
         <span className="text-xl text-gray-700 font-bold">
           Most Selling Products

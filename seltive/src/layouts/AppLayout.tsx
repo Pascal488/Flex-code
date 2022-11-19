@@ -5,7 +5,7 @@ import AuthProvider from "../providers/AuthProvider";
 export default function AppLayout() {
   return (
     <AuthProvider>
-      <main className="flex min-h-screen gap-5">
+      <main className="flex min-h-screen gap-5 ">
         <section className="w-[200px] bg-white ">
           <Sidebar />
         </section>

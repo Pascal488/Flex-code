@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AppLayout from "./layouts/AppLayout";
@@ -20,8 +20,9 @@ import Promotion from "./pages/homepages/promotion/Promotion";
 
 
 function App() {
+ 
   return (
-    <div className="font-barlow  bg-indigo-50">
+    <div className="font-barlow  bg-indigo-50 dark:bg-slate-800">
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<AppLayout />}>

@@ -3,9 +3,9 @@ import React from "react";
 const Welcome = () => {
 
   return (
-    <div className="flex m-auto max-w-[50%] h-screen w-full">
+    <div className="flex m-auto max-w-[50%] h-screen w-full ">
     <div className="m-auto ">
-      <div className=" py-14 px-24 text-center  bg-white shadow-xl ">
+      <div className=" py-14 px-24 text-center  bg-white shadow-xl dark:bg-slate-900 dark:text-white dark:shadow-xl">
         <div className="flex flex-col gap-3">
           <h1 className="text-5xl font-extrabold">Welcome to Seltive </h1>
           <span className="mb-3 text-center">
