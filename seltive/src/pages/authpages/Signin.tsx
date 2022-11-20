@@ -85,7 +85,7 @@ const Signin = (props: any) => {
 
   return (
     <div>
-      <div className="flex h-screen md:flex-col bg-white">
+      <div className="flex h-screen md:flex-col bg-white ">
         <div
           className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden"
           style={{
@@ -115,7 +115,7 @@ const Signin = (props: any) => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative">
+        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 ipad:relative ">
           {loading && (
             <div className="absolute left-[45%] right-[50%] bottom-0 top-[35%] m-auto z-99 ">
               <ColorRing
