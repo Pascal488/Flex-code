@@ -16,10 +16,10 @@ const Orders = () => {
         </span>
       </div>
 
-      <div className="flex justify-between items-center gap-5 p-5 bg-white rounded-md shadow-sm min-w-[1200px]">
-        <div className="flex justify-between items-center border border-gray-500 rounded-md overflow-auto bg-white">
-          <span className="text-xl p-1">
-            <GoSearch />
+      <div className="flex justify-between items-center gap-5 p-5 bg-white rounded-md shadow-sm min-w-[1200px] dark:bg-slate-900 dark:text-gray-500">
+        <div className="flex justify-between items-center border border-gray-500 rounded-md overflow-auto bg-white dark:border-2 dark:border-indigo-600">
+          <span className=" p-1">
+            <GoSearch className="dark:text-indigo-600" />
           </span>
           <input
             type="text"
@@ -29,14 +29,13 @@ const Orders = () => {
             className="w-[350px] outline-none p-1"
           />
         </div>
-
         <div className="flex gap-5">
-          <span className="text-sm flex items-center justify-center gap-1 py-1 px-5 bg-indigo-600  text-white rounded-sm">
+          <span className="text-sm flex items-center justify-center gap-1 py-1 px-4 bg-indigo-600  text-white rounded-sm">
             <button className="">Filter</button>
-            <RiArrowDownSLine className="text-2xl cursor-pointer" />
+            <RiArrowDownSLine className=" cursor-pointer" />
           </span>
 
-          <span className="text-sm flex items-center justify-center gap-1 py-1 px-5 bg-indigo-600  text-white rounded-sm">
+          <span className="text-sm flex items-center justify-center gap-1 py-1 px-4 bg-indigo-600  text-white rounded-sm">
             <HiOutlineDocumentArrowDown className=" cursor-pointer" />
             <button className="">Export</button>
           </span>
