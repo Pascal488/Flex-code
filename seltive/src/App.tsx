@@ -1,4 +1,4 @@
-import { useState, useEffect,useLayoutEffect  } from "react";
+import { useLayoutEffect  } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AppLayout from "./layouts/AppLayout";
@@ -16,6 +16,7 @@ import Welcome from "./pages/homepages/Welcome";
 import Overview from "./pages/homepages/overview/Overview";
 import Marketing from "./pages/homepages/marketing/Marketing";
 import Promotion from "./pages/homepages/promotion/Promotion";
+import Orders from "./pages/homepages/orders/Orders";
 
 
 
@@ -40,6 +41,8 @@ function App() {
                 <Route path="/overview" element={<Overview/>}/>
                 <Route path="/marketing" element={<Marketing/>}/>
                 <Route path="/promotion" element={<Promotion/>}/>
+                <Route path="/orders" element={<Orders/>}/>
+
             </Route>
             <Route path="/login"element={<Signin  />} />
             <Route path="/signup" element={<Signup />} />
