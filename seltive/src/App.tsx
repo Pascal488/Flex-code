@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useLayoutEffect  } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AppLayout from "./layouts/AppLayout";
@@ -20,9 +20,18 @@ import Promotion from "./pages/homepages/promotion/Promotion";
 
 
 function App() {
+  useLayoutEffect(() => {
+    const loader = document.getElementById("loader")!;
+    setTimeout(() => {
+      loader.classList.add("loaded");
+      setTimeout(() => {
+        document.body.removeChild(loader);
+      }, 300);
+    }, 2000);
+  }, []);
  
   return (
-    <div className="font-barlow  bg-indigo-50 dark:bg-slate-800">
+    <div className="font-barlow  bg-indigo-50 dark:bg-slate-800"  style={{ animationDelay: "0.1s" }}>
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<AppLayout />}>
