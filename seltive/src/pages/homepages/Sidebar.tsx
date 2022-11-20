@@ -159,13 +159,13 @@ const Sidebar = () => {
       </div>
       <div className="flex gap-5 ">
         <span
-          className="w-8 h-8 bg-gray-200 dark:bg-gray-800 cursor-pointer flex items-center justify-center rounded-sm text-2xl"
+          className="w-8 h-8 bg-gray-200 dark:bg-gray-800 dark:text-white cursor-pointer flex items-center justify-center rounded-sm text-2xl"
           onClick={handleThemedark}
         >
           <CiDark />
         </span>
         <span
-          className="w-8 h-8 bg-gray-200 dark:bg-gray-800 cursor-pointer flex items-center justify-center rounded-sm text-2xl"
+          className="w-8 h-8 bg-gray-200 dark:bg-gray-800 dark:text-white cursor-pointer flex items-center justify-center rounded-sm text-2xl"
           onClick={handleThemeLight}
         >
           <MdOutlineLightMode />
