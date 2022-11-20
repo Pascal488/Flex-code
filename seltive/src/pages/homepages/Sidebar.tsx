@@ -12,7 +12,7 @@ import { CiDark } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
