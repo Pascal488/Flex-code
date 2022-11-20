@@ -36,7 +36,7 @@ const Promotion = () => {
   };
   return (
     <div className="p-5">
-      <h1 className="text-gray-700 font-semibold text-2xl dark:text-blue-400">
+      <h1 className="text-gray-700 font-semibold text-2xl dark:text-blue-600">
         Promotion
       </h1>
       <p className="mb-10 text-gray-500 dark:text-gray-400 ">

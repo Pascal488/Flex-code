@@ -11,7 +11,7 @@ const Overview = () => {
   return (
     <div >
       <div className="mb-2">
-        <h1 className="text-3xl mt-2">Overview</h1>
+        <h1 className="text-3xl mt-2 dark:text-indigo-600 dark:font-semibold">Overview</h1>
         <span className="text-gray-400">
           Summary of your store for March 4, 2022
         </span>
