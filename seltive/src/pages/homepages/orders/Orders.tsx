@@ -44,7 +44,7 @@ const Orders = () => {
           
         </div>
       </div>
-      <Ordertable/>
+      <Ordertable />
 
 </div>
 

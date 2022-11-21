@@ -16,7 +16,7 @@ const Ordertable = () => {
 
   return (
     <div>
-      <table {...getTableProps()}>
+      <table {...getTableProps()} className="text-gray-500 font-semiblod text-[15px] dark:text-gray-300">
         <thead>
           {headerGroups.map((headerGroups) => (
             <tr {...headerGroups.getHeaderGroupProps()}>
@@ -31,7 +31,10 @@ const Ordertable = () => {
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()} className="[&>*:nth-child(even)]:bg-gray-100 dark:[&>*:nth-child(even)]:bg-slate-800">
+        <tbody
+          {...getTableBodyProps()}
+          className="[&>*:nth-child(even)]:bg-gray-100 dark:[&>*:nth-child(even)]:bg-slate-800"
+        >
           {rows.map((rows) => {
             prepareRow(rows);
             return (
