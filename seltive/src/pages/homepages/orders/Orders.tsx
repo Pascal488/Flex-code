@@ -3,11 +3,12 @@ import React from "react";
 import { GoSearch } from "react-icons/go";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
+import Ordertable from "./Ordertable";
 
 const Orders = () => {
   return (
     <div>
-      <div className="mb-10">
+      <div className="mb-5">
         <h1 className="text-3xl mt-2 dark:text-indigo-600 dark:font-semibold">
           Orders
         </h1>
@@ -15,8 +16,9 @@ const Orders = () => {
           View all purchases orders made to your store
         </span>
       </div>
+<div className="flex flex-col p-5 bg-white rounded-md shadow-sm min-w-[1200px] dark:bg-slate-900 dark:text-gray-500">
 
-      <div className="flex justify-between items-center gap-5 p-5 bg-white rounded-md shadow-sm min-w-[1200px] dark:bg-slate-900 dark:text-gray-500">
+      <div className="flex justify-between items-center gap-5 mb-5">
         <div className="flex justify-between items-center border border-gray-500 rounded-md overflow-auto bg-white dark:border-2 dark:border-indigo-600">
           <span className=" p-1">
             <GoSearch className="dark:text-indigo-600" />
@@ -39,8 +41,13 @@ const Orders = () => {
             <HiOutlineDocumentArrowDown className=" cursor-pointer" />
             <button className="">Export</button>
           </span>
+          
         </div>
       </div>
+      <Ordertable/>
+
+</div>
+
     </div>
   );
 };

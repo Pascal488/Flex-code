@@ -3,7 +3,6 @@ import { BsPeople, BsCart3 } from "react-icons/bs";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import { MdOutlinePayments } from "react-icons/md";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import "./Table.css";
 import Overviewtable from "./Overviewtable";
 import Mostviewedproduct from "./Mostviewedproduct";
 

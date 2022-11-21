@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Table.css"
 const Overviewtable = () => {
   return (
     <div className=" bg-white shadow-xl w-[61%] rounded-md p-3 dark:bg-slate-900">
@@ -7,7 +7,7 @@ const Overviewtable = () => {
         <span className="text-xl text-gray-700 font-bold dark:text-gray-500">
           Most Selling Products
         </span>
-        <span className="text-sm text-indigo-600 cursor-pointer hover:underline">
+        <span className="text-sm text-indigo-600 cursor-pointer hover:underline ">
           View All Products
         </span>
       </div>
