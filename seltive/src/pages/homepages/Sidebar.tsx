@@ -130,6 +130,7 @@ const Sidebar = () => {
       <div>
         <ul className="list-none text-gray-700 dark:text-gray-400">
           <span className="p-2 text-sm font-extrabold">ACCOUNT</span>
+          <Link to="/home">
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold  dark:hover:bg-gray-800"
             style={commonstyles}
@@ -137,6 +138,7 @@ const Sidebar = () => {
             <BsSearch />
             <li>Explore</li>
           </span>
+          </Link>
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
             style={commonstyles}

@@ -33,47 +33,47 @@ const Marketing = () => {
       </p>
       <div style={styles.maincontainer}>
         <div className="transition ease-in-out delay-150 flex flex-wrap gap-5 max-w-3xl ">
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className="bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-2xl">{Googleicon}</span>
             <span style={styles.textstyle} className="dark:text-blue-500">Google Ads</span>
           </div>
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className="bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-xl text-blue-500">
               <BsFacebook />
             </span>
             <span className="dark:text-blue-500">Facebook Ads</span>
           </div>
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className=" bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-xl text-blue-600">
               <BsLinkedin />
             </span>
-            <span style={styles.textstyle} className="dark:text-blue-500">LinkedIn Ads</span>
+            <span style={styles.textstyle} className=" dark:text-blue-500">LinkedIn Ads</span>
           </div>
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className="bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-xl text-red-600">
               <BsPinterest />
             </span>
             <span style={styles.textstyle} className="dark:text-blue-500">Pinterest Ads</span>
           </div>
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className="bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-xl">
               <FaTiktok />
             </span>
             <span style={styles.textstyle} className="dark:text-blue-500">TikTok Ads</span>
           </div>
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className=" bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-xl text-blue-500">
               <BsTwitter />
             </span>
             <span style={styles.textstyle} className="dark:text-blue-500">Twitter Ads</span>
           </div>
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className="bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-2xl text-indigo-700">
               <HiMail />
             </span>
             <span style={styles.textstyle} className="dark:text-blue-500">Email Marketing</span>
           </div>
-          <div style={styles.container} className="dark:bg-slate-900 shadow-md ">
+          <div style={styles.container} className="bg-white dark:bg-slate-900 shadow-md ">
             <span className="text-xl text-indigo-700">
               <FiLink />
             </span>

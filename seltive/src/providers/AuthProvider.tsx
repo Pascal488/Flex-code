@@ -12,7 +12,7 @@ export default function AuthProvider({children}: IProps){
     useEffect(() => {
         const token = localStorage.getItem("token");
         if(token === null) {
-            navigate("/login", {replace: true});
+            navigate("/home", {replace: true});
         }
     }, [])
 

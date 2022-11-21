@@ -18,6 +18,7 @@ import Marketing from "./pages/homepages/marketing/Marketing";
 import Promotion from "./pages/homepages/promotion/Promotion";
 import Orders from "./pages/homepages/orders/Orders";
 import Product from "./pages/homepages/products/Product";
+import HomeExplore from "./pages/homeexplore/HomeExplore";
 
 
 
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/product" element={<Product/>}/>
             </Route>
 
+            <Route path="/home"element={<HomeExplore  />} />
             <Route path="/login"element={<Signin  />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/confirm" element={<Confirm />} />
