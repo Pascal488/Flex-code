@@ -31,13 +31,13 @@ const Ordertable = () => {
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()}>
+        <tbody {...getTableBodyProps()} className="[&>*:nth-child(even)]:bg-gray-100 dark:[&>*:nth-child(even)]:bg-slate-800">
           {rows.map((rows) => {
             prepareRow(rows);
             return (
               <tr
                 {...rows.getRowProps()}
-                className="hover:color-indigo-600 dark:hover:bg-slate-900 hover:font-bold"
+                className=" hover:color-indigo-600 dark:hover:bg-slate-900 hover:font-bold"
               >
                 {rows.cells.map((cell) => {
                   return (
