@@ -77,6 +77,7 @@ const Sidebar = () => {
             <li>Orders</li>
           </span>
           </Link>
+          <Link to="/product">
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
             style={commonstyles}
@@ -84,6 +85,7 @@ const Sidebar = () => {
             <HiOutlineFolder />
             <li>Products</li>
           </span>
+          </Link>
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
             style={commonstyles}
