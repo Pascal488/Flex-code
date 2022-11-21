@@ -12,11 +12,15 @@ export const COLUMNS = [
         accessor:"customer"
     },
     {
+        Header:'Status',
+        accessor:"status"
+    },
+    {
         Header:'Email',
         accessor:"email"
     },
     {
-        Header:'Date',
+        Header:'Date Modified',
         accessor:"date"
     },
     {

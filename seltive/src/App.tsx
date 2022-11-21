@@ -17,7 +17,7 @@ import Overview from "./pages/homepages/overview/Overview";
 import Marketing from "./pages/homepages/marketing/Marketing";
 import Promotion from "./pages/homepages/promotion/Promotion";
 import Orders from "./pages/homepages/orders/Orders";
-import Product from "./pages/homepages/overview/products/Product";
+import Product from "./pages/homepages/products/Product";
 
 
 
@@ -44,8 +44,8 @@ function App() {
                 <Route path="/promotion" element={<Promotion/>}/>
                 <Route path="/orders" element={<Orders/>}/>
                 <Route path="/product" element={<Product/>}/>
-
             </Route>
+
             <Route path="/login"element={<Signin  />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/confirm" element={<Confirm />} />

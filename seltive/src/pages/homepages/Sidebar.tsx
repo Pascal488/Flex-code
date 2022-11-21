@@ -61,7 +61,7 @@ const Sidebar = () => {
           <span className="mb-5 p-2 text-sm font-extrabold">STORE</span>
           <Link to="/overview">
             <span
-              className="      cursor-pointer   hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold   hover:border-l-gray-500 dark:hover:bg-gray-800"
+              className="cursor-pointer   hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold   hover:border-l-gray-500 dark:hover:bg-gray-800"
               style={commonstyles}
             >
               <AiOutlineHome />
@@ -70,7 +70,7 @@ const Sidebar = () => {
           </Link>
           <Link to='/orders'>
           <span
-            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
+            className="cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
             style={commonstyles}
           >
             <MdOutlinePayments />

@@ -9,7 +9,7 @@ import { onError } from "@apollo/client/link/error";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-//console.log(process.env)
+
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_API_URL,

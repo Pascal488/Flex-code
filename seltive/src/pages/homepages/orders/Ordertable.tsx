@@ -23,7 +23,7 @@ const Ordertable = () => {
               {headerGroups.headers.map((columns) => (
                 <th
                   {...columns.getHeaderProps()}
-                  className="py-[8px] px-[30px] text-left"
+                  className="py-[8px] px-[20px] text-left"
                 >
                   {columns.render("Header")}
                 </th>
@@ -46,7 +46,7 @@ const Ordertable = () => {
                   return (
                     <td
                       {...cell.getCellProps()}
-                      className="py-[8px] px-[30px] text-left"
+                      className="py-[8px] px-[20px] text-left"
                     >
                       {cell.render("Cell")}
                     </td>
