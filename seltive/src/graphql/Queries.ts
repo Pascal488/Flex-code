@@ -25,3 +25,11 @@ export const LoginQuery = gql`
     }
   }
 `;
+export const ForgotpaswordQuery = gql`
+  query ForgotPassword($identifier: String!) {
+    forgotPassword(identifier: $identifier) {
+      email
+      message
+    }
+  }
+`;

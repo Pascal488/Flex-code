@@ -6,16 +6,10 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 
 
-import { gql, useLazyQuery } from "@apollo/client";
+import {  useLazyQuery } from "@apollo/client";
+import { ForgotpaswordQuery } from "../../graphql/Queries";
 
-export const ForgotpaswordQuery = gql`
-  query ForgotPassword($identifier: String!) {
-    forgotPassword(identifier: $identifier) {
-      email
-      message
-    }
-  }
-`;
+
 
 type Input = {
   email: string;
