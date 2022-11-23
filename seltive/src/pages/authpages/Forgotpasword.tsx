@@ -5,6 +5,7 @@ import { FaLock } from "react-icons/fa";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 
+
 import { gql, useLazyQuery } from "@apollo/client";
 
 export const ForgotpaswordQuery = gql`
@@ -15,6 +16,7 @@ export const ForgotpaswordQuery = gql`
     }
   }
 `;
+
 type Input = {
   email: string;
 };
@@ -63,6 +65,7 @@ const Forgotpasword = () => {
             Username or Email
           </label>
           <br />
+          
           <input
             id="email"
             name="email"

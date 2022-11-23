@@ -56,6 +56,8 @@ function App() {
             <Route path="/checkemail" element={<Checkemail />} />
             <Route path="/setnewpassword" element={<Setnewpasword />} />
             <Route path="/ressetsuccespage" element={<ResetSuccesspage />} />
+            <Route path="/home"element={<HomeExplore  />} />
+
          
         </Routes>
       </BrowserRouter>

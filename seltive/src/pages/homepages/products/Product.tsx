@@ -50,6 +50,7 @@ const Product = () => {
           </div>
         </div>
         <ProductTable />
+
       </div>
 
       </>

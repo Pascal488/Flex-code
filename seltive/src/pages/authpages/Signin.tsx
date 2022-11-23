@@ -4,41 +4,19 @@ import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useLazyQuery, gql } from "@apollo/client";
 
 import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ColorRing } from "react-loader-spinner";
+import { LoginQuery } from "../../graphql/Queries";
+import { useLazyQuery } from "@apollo/client";
 
 export const Googleicon = <FcGoogle />;
 export const Appleicon = <AiFillApple />;
 
-export const LoginQuery = gql`
-  query Login($login: Login!) {
-    login(login: $login) {
-      id
-      firstName
-      middleName
-      bio
-      email
-      lastName
-      name
-      username
-      dp
-      verified
-      enabled
-      created
-      lastUpdated
-      token
-      total
-      userCover
-      creator
-      twoFa
-    }
-  }
-`;
+
 
 type Inputs = {
   username: string;

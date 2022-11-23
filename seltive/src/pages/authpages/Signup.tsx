@@ -3,34 +3,12 @@ import React, { useState } from "react";
 import { Googleicon } from "./Signin";
 import { Appleicon } from "./Signin";
 import { Link, useNavigate } from "react-router-dom";
-import { useMutation, gql } from "@apollo/client";
 import { useForm } from "react-hook-form";
 import { ColorRing } from "react-loader-spinner";
+import { Userdata } from "../../graphql/Mutation";
+import { useMutation } from "@apollo/client";
 
-export const Userdata = gql`
-  mutation Register($user: UserInput!) {
-    register(user: $user) {
-      id
-      firstName
-      middleName
-      bio
-      email
-      lastName
-      name
-      username
-      dp
-      verified
-      enabled
-      created
-      lastUpdated
-      token
-      total
-      userCover
-      creator
-      twoFa
-    }
-  }
-`;
+
 type Inputs = {
   email: string;
   name: string;
