@@ -26,7 +26,11 @@ module.exports = {
       'ipad':{'max':'820px'},
     },
 
-    extend: {},
+    extend: {
+      rotate: {
+        '145': '145deg',
+      }
+    },
   },
   plugins: [],
 }
