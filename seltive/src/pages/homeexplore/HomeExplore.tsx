@@ -25,10 +25,10 @@ const HomeExplore = () => {
     <>
       <div className="flex items-center gap-5 p-3 w-full justify-around bg-white shadow-sm">
         <div className="flex  gap-4 items-center ">
-          <span className="w-10 h-10 rounded-full bg-indigo-600"></span>
+          <span className="md:hidden w-10 h-10 rounded-full bg-indigo-600"></span>
           <h1 className=" text-2xl text-indigo-700 font-extrabold">Seltive</h1>
         </div>
-        <div className="flex items-center bg-indigo-50 justify-around w-[35%] rounded-sm py-1 px-4">
+        <div className="md:hidden md:w-full md:justify-center flex items-center bg-indigo-50 justify-around w-[35%] rounded-sm py-1 px-4">
           <span className="flex items-center gap-2">
             Explore
             <RiArrowDownSLine className="text-xl cursor-pointer" />
@@ -62,13 +62,13 @@ const HomeExplore = () => {
       <div className="p-5 w-full ">
         <div className="ml-24">
           <h1 className="text-gray-500 font-semibold ">EXPLORE SELTIVE</h1>
-          <p className="text-4xl  mb-2">
+          <p className="text-4xl md:text-sm mb-2">
             Discover the best content for entertainment, education,
             <br /> or assets for your next project.
           </p>
         </div>
 
-        <div className="flex items-center justify-around w-full gap-2">
+        <div className="flex items-center justify-around w-full gap-2  md:flex-col ">
           <div className="flex flex-col p-5 bg-white shadow-md">
             <h1>Animations</h1>
             <span>Movies, tutorials, rigs, and assets</span>
