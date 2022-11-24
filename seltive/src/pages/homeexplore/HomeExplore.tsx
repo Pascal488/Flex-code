@@ -25,7 +25,10 @@ const HomeExplore = () => {
     <>
       <div className="flex items-center gap-5 p-3 w-full justify-around bg-white shadow-sm">
         <div className="flex  gap-4 items-center ">
-          <span className="md:hidden w-10 h-10 rounded-full bg-indigo-600"></span>
+          <span className="relative md:hidden flex flex-col gap-2 w-10 h-10 rounded-full bg-indigo-600">
+            <span className="absolute bottom-5 left-1  rotate-[145deg] w-[30px] p-[3px] rounded-md h-[2px] bg-green-200 "></span>
+            <span className="absolute  bottom-3 left-2   rotate-[145deg] w-[29px] p-[3px]  rounded-md h-[2px] bg-red-200"></span>
+          </span>
           <h1 className=" text-2xl text-indigo-700 font-extrabold">Seltive</h1>
         </div>
         <div className="md:hidden md:w-full md:justify-center flex items-center bg-indigo-50 justify-around w-[35%] rounded-sm py-1 px-4">
@@ -94,7 +97,7 @@ const HomeExplore = () => {
             </span>
           </div>
         </div>
-      </div> 
+      </div>
     </>
   );
 };
