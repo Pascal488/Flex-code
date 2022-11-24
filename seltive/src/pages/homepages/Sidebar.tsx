@@ -159,7 +159,10 @@ const Sidebar = () => {
           >
             <HiOutlineCog />
             <li>Account Settings</li>
+
           </span>
+          <li className="mt-7 ml-1  dark:text-gray-400">THEME</li>
+
         </ul>
       </div>
       <div className="flex gap-5 ">
