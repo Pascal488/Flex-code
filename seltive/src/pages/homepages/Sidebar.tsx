@@ -51,10 +51,10 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col p-4 gap-2 shadow-xl h-screen dark:bg-slate-900 ">
       <div className="flex  gap-4 items-center mb-10">
-      <span className="relative md:hidden flex flex-col gap-2 w-10 h-10 rounded-full bg-indigo-600">
-            <span className="absolute bottom-5 left-1  rotate-[145deg] w-[30px] p-[3px] rounded-md h-[2px] bg-green-200 "></span>
-            <span className="absolute  bottom-3 left-2   rotate-[145deg] w-[29px] p-[3px]  rounded-md h-[2px] bg-red-200"></span>
-          </span>
+        <span className="relative md:hidden flex flex-col gap-2 w-10 h-10 rounded-full bg-indigo-600">
+          <span className="absolute bottom-5 left-1  rotate-[145deg] w-[30px] p-[3px] rounded-md h-[2px] bg-green-200 "></span>
+          <span className="absolute  bottom-3 left-2   rotate-[145deg] w-[29px] p-[3px]  rounded-md h-[2px] bg-red-200"></span>
+        </span>
 
         <h1 className=" text-2xl text-indigo-700 font-extrabold">Seltive</h1>
       </div>
@@ -71,23 +71,23 @@ const Sidebar = () => {
               <li>Overview</li>
             </span>
           </Link>
-          <Link to='/orders'>
-          <span
-            className="cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
-            style={commonstyles}
-          >
-            <MdOutlinePayments />
-            <li>Orders</li>
-          </span>
+          <Link to="/orders">
+            <span
+              className="cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
+              style={commonstyles}
+            >
+              <MdOutlinePayments />
+              <li>Orders</li>
+            </span>
           </Link>
           <Link to="/product">
-          <span
-            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
-            style={commonstyles}
-          >
-            <HiOutlineFolder />
-            <li>Products</li>
-          </span>
+            <span
+              className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
+              style={commonstyles}
+            >
+              <HiOutlineFolder />
+              <li>Products</li>
+            </span>
           </Link>
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
@@ -134,13 +134,13 @@ const Sidebar = () => {
         <ul className="list-none text-gray-700 dark:text-gray-400">
           <span className="p-2 text-sm font-extrabold">ACCOUNT</span>
           <Link to="/home">
-          <span
-            className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold  dark:hover:bg-gray-800"
-            style={commonstyles}
-          >
-            <BsSearch />
-            <li>Explore</li>
-          </span>
+            <span
+              className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold  dark:hover:bg-gray-800"
+              style={commonstyles}
+            >
+              <BsSearch />
+              <li>Explore</li>
+            </span>
           </Link>
           <span
             className=" cursor-pointer hover:bg-indigo-50 hover:text-indigo-700 hover:font-extrabold dark:hover:bg-gray-800"
@@ -162,10 +162,8 @@ const Sidebar = () => {
           >
             <HiOutlineCog />
             <li>Account Settings</li>
-
           </span>
           <li className="mt-7 ml-1  dark:text-gray-400">THEME</li>
-
         </ul>
       </div>
       <div className="flex gap-5 ">
