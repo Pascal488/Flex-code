@@ -8,8 +8,8 @@ const Card = () => {
         src="
                https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
                 "
-        alt=""
-        className="w-[350px] h-[200px] rounded-t-xl"
+        alt="Image"
+        className="w-[350px] h-[200px] rounded-t-xl bg-black"
       />
       <div className="bg-white w-[350px] p-3 h-[260px] shadow-xl rounded-b-md">
         <span className="flex items-center justify-center gap-1 bg-indigo-200 text-indigo-600 w-20 h-6 rounded-md shadow-sm">

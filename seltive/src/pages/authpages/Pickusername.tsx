@@ -7,7 +7,7 @@ const Pickusername = () => {
     <div>
       <div className="flex h-screen md:flex-col">
         <div
-          className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen"
+          className="flex flex-col justify-between bg-black text-gray-100  flex-1 h-screen md:hidden"
           style={{
             backgroundImage:
               "url('htt://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA..')",
@@ -35,8 +35,8 @@ const Pickusername = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4">
-          <form className="flex flex-col justify-center py-36 px-10">
+        <div className="flex flex-col p-2 bg-gray-50 mb-5 flex-1 gap-4 h-screen">
+          <form className="flex flex-col justify-center py-36 px-10 ">
             <h1 className="text-[49px] text-gray-900 mb-8">Pick a username</h1>
             <label htmlFor="Email">Pick a username</label>
             <input
@@ -47,11 +47,7 @@ const Pickusername = () => {
             <span className="-mt-5 mb-5 text-xs p-1">
               Special character and spaces are not allowed
             </span>
-            <input
-              type="button"
-              value="Sign In"
-              className="border border-black  p-1  rounded-[5px] mb-10"
-            />
+            
             <input
               type="button"
               value="Save & Continue"
