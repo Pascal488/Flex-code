@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { ColorRing } from "react-loader-spinner";
 import { Userdata } from "../../graphql/Mutation";
 import { useMutation } from "@apollo/client";
+import Logo from "../../components/Logo";
 
 
 type Inputs = {
@@ -66,12 +67,7 @@ const Signup = (props: any) => {
           }}
         >
           <div className="flex items-center gap-4 p-16 ">
-            <img
-              src="
-                        https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?cs=srgb&dl=pexels-pixabay-164595.jpg&fm=jpg&_gl=1*gwoqpz*_ga*MTUxMjM0NjE5NC4xNjY2MDc5MDM2*_ga_8JE65Q40S6*MTY2NjA3OTAzOS4xLjEuMTY2NjA4MDcwNS4wLjAuMA.."
-              alt=""
-              className="w-10 h-10 rounded-full bg-black"
-            />
+            <Logo/>
             <span className="text-[39px]">Seltive</span>
           </div>
           <div className=" p-16">
