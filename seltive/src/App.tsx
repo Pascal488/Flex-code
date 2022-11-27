@@ -19,6 +19,7 @@ import Promotion from "./pages/homepages/promotion/Promotion";
 import Orders from "./pages/homepages/orders/Orders";
 import Product from "./pages/homepages/products/Product";
 import HomeExplore from "./pages/homeexplore/HomeExplore";
+import Customers from "./pages/homepages/customers/Customers";
 
 
 
@@ -45,6 +46,8 @@ function App() {
                 <Route path="/promotion" element={<Promotion/>}/>
                 <Route path="/orders" element={<Orders/>}/>
                 <Route path="/product" element={<Product/>}/>
+                <Route path="/customers" element={<Customers/>}/>
+
             </Route>
 
             <Route path="/home"element={<HomeExplore  />} />
