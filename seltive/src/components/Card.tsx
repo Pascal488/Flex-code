@@ -1,13 +1,30 @@
 import React from "react";
 import { AiOutlineStar } from "react-icons/ai";
 
-const Card = () => {
+type Items ={
+  image:string;
+  header:string;
+  price:number;
+  desc:string
+}
+
+const cardItems = {
+  image:" https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  header:" Algebra solutions with steps for standard seven students.",
+  price:200,
+  desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissimpurus turpis sed id. Facilisis placerat at massa vitae volutpat mus.Scelerisque cursus porttitor vel turpis. risus orci, amet est."
+
+}
+
+
+
+
+
+const Card = ({}:Items) => {
   return (
     <div className="w-[350px] ">
       <img
-        src="
-               https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-                "
+        src={cardItems.image}
         alt="Image"
         className="w-[350px] h-[200px] rounded-t-xl bg-black"
       />
@@ -22,14 +39,11 @@ const Card = () => {
             Algebra solutions with steps for standard seven students.
           </li>
           <li className="font-semibold text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
-            purus turpis sed id. Facilisis placerat at massa vitae volutpat mus.
-            Scelerisque cursus porttitor vel turpis. Adipiscing nec etiam
-            adipiscing nunc, risus orci, amet est.
+            {cardItems.desc}
           </li>
         </ul>
         <span className="flex w-full justify-between p-2 items-center">
-          <span>TZS 2000</span>
+          <span>TZS {cardItems.price}</span>
           <button className="bg-indigo-600 w-[70px] h-[30px] rounded-sm text-white">
             BUY
           </button>
