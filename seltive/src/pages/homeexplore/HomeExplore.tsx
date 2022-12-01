@@ -4,7 +4,8 @@ import { BsArrowRightShort } from "react-icons/bs";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 
-const HomeExplore = () => {
+const HomeExplore = (props:any) => {
+
   const commonstyles = {
     container: {
       display: "flex",
@@ -64,15 +65,8 @@ const HomeExplore = () => {
         </h1>
 
         <div className="flex flex-wrap justify-around ml-10 md:ml-0  mt-4 gap-6 md:items-center  md:justify-center md:flex md:flex-col">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card {...props} />
+         
         </div>
       </div>
     </>
